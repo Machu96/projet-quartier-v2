@@ -13,19 +13,22 @@
 
 Route::get('/', function () {
     return view('home.index');
-});
+})->name('home');
 
 
-Route::group(['prefix' => '{local}'], function($local){
+Route::get('catalog', 'CatalogController@index');
 
-    App::setLocale($local);
+Route::resource('products', 'ProductController');
+Route::resource('shops', 'ShopController');
+Route::resource('events', 'EventController');
+Route::resource('places', 'PlaceController');
+Route::resource('orders', 'OrderController');
 
-    Route::get('catalog', 'CatalogController@index');
 
-    Route::resource('products', 'ProductController');
-    Route::resource('shops', 'ShopController');
-    Route::resource('events', 'EventController');
-    Route::resource('places', 'PlaceController');
-    Route::resource('orders', 'OrderController');
+Route::group(['prefix' => 'admin'], function(){
+
+    Route::get('dashboard', function (){
+        return ['oui', 'non'];
+    });
 
 });

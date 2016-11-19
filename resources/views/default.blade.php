@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
         {!! Html::style('css/style.css') !!}
         {!! Html::style('css/home.css') !!}
     </head>
+
     <body>
         {{--<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -22,9 +23,9 @@
         </div>--}}
         <nav>
             <ul class="menu">
-                <li>Accueil</li>
-                <li>Lieux culturel</li>
-                <li>Catalogue</li>
+                <li><a href="{{ route('home') }}">Accueil</a></li>
+                <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
+                <li><a href="{{ action('CatalogController@index') }}">Produit</a></li>
                 <li>
                     <form id="flags-form" action="" method="get">
                         <button type="submit" name="lang" value="fr">
@@ -52,7 +53,7 @@
             @yield('content')
         </div>
 
-        <script src="js/jquery.js"></script>
+        {!! Html::script('js/jquery.js') !!}
         <script>
             @yield('script')
         </script>
