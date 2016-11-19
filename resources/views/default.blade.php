@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-        <link rel="stylesheet" href="css/knacss.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/home.css">
+
+        {!! Html::style('css/knacss.css') !!}
+        {!! Html::style('css/style.css') !!}
+        {!! Html::style('css/home.css') !!}
     </head>
     <body>
         {{--<div class="flex-center position-ref full-height">

@@ -15,10 +15,17 @@ Route::get('/', function () {
     return view('home.index');
 });
 
-Route::get('catalog', 'CatalogController@index');
 
-Route::resource('products', 'ProductController');
-Route::resource('shops', 'ShopController');
-Route::resource('events', 'EventController');
-Route::resource('places', 'PlaceController');
-Route::resource('orders', 'OrderController');
+Route::group(['prefix' => '{local}'], function($local){
+
+    App::setLocale($local);
+
+    Route::get('catalog', 'CatalogController@index');
+
+    Route::resource('products', 'ProductController');
+    Route::resource('shops', 'ShopController');
+    Route::resource('events', 'EventController');
+    Route::resource('places', 'PlaceController');
+    Route::resource('orders', 'OrderController');
+
+});
