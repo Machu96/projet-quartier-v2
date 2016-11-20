@@ -10,6 +10,7 @@
         {!! Html::style('css/knacss.css') !!}
         {!! Html::style('css/style.css') !!}
         {!! Html::style('css/home.css') !!}
+        {!! Html::style('css/parcours.css') !!}
     </head>
 
     <body>
@@ -25,7 +26,8 @@
             <ul class="menu">
                 <li><a href="{{ route('home') }}">Accueil</a></li>
                 <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
-                <li><a href="{{ action('CatalogController@index') }}">Produit</a></li>
+                <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
+                <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li>
                     <form id="flags-form" action="" method="get">
                         <button type="submit" name="lang" value="fr">
@@ -53,9 +55,8 @@
             @yield('content')
         </div>
 
+
         {!! Html::script('js/jquery.js') !!}
-        <script>
-            @yield('script')
-        </script>
+        @yield('script')
     </body>
 </html>

@@ -14,7 +14,8 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        return DB::table('places')->get();
+        $places = DB::table('places')->get();
+        return view('place.index', $places);
     }
 
     /**
