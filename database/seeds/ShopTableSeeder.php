@@ -12,7 +12,7 @@ class ShopTableSeeder extends Seeder
     public function run()
     {
         for($i = 0; $i < 10; $i++){
-            DB::table('products')->insert([
+            DB::table('shops')->insert([
                 'name' => str_random(10)
             ]);
         }

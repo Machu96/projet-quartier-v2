@@ -12,6 +12,7 @@
 
     {{-- Mettre le contenu ici --}}
     <h2>Titre exemple</h2>
+    {!! dd($data) !!}
 
 @endsection
 
