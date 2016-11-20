@@ -1,0 +1,98 @@
+/*--------------------------------------------------
+	Ma visite
+--------------------------------------------------*/
+
+.title{
+    text-align: center;
+}
+#section-parcours{
+    background-color: white;
+    margin-top: 250px;
+    width:100%;
+}
+#parcours-menu{
+    font-size:20px;
+}
+#parcours-menu li{
+    display: inline;
+}
+#parcours-menu li > a{
+     padding-right:10vw;
+ }
+
+iframe{
+    border:0;
+}
+
+.container-text ul{
+    list-style: none;
+}
+.container-text li{
+    margin-top:5px;
+}
+
+.copy-link-map{
+    margin-top:20px;
+    width:100%;
+}
+.map{
+    width:100%;
+    height:500px;
+}
+#link-map input{
+    width:70%;
+    font-family:TW Cen MTRegular;
+}
+#link-map button{
+    margin-left: 3%;
+}
+
+/* ---- test --- */
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
