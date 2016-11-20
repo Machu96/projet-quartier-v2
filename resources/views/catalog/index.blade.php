@@ -12,14 +12,52 @@
 
     {{-- Mettre le contenu ici --}}
     <h2>Titre exemple</h2>
-    {!! dd($data) !!}
+    <div style="background-color: white">
+
+        <form method="get" action="{!! url('CatalogController@filter') !!}">
+
+            <label for="name">Nom de l'article</label>
+            <input name="name" id="name" type="text">
+
+        </form>
+        
+        <table class="table table-auto">
+            @forelse($data as $d)
+                <tr>
+                    <th>{{ $d->productName }}</th>
+                    <th>{{ $d->productDescription }}</th>
+                    <th>Restant : {{ $d->productStock }}</th>
+                </tr>
+            @empty
+
+                Aucun article correspondants
+
+            @endforelse
+        </table>
+    </div>
 
 @endsection
 
 
 
 @section('script')
+    {{--
+        Pour filtrer les données
+        Ou appeler une methode
+     --}}
+    <script>
+        $(document).ready(function(){
 
-    {{-- Mettre le jQuery ici --}}
+            $('#name').keyup(function(){
+                $.getJSON(
+                        '{!! url('catalog/filter') !!}/' + this.value
+                )
+                .then(function (response) {
+                    console.log(response)
+                })
+            })
+
+        });
+    </script>
 
 @endsection

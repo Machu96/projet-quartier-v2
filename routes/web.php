@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 
 Route::get('catalog', 'CatalogController@index');
+Route::get('catalog/filter/{query}', 'CatalogController@filter');
+
 Route::get('journey', 'JourneyController@index');
 
 Route::resource('products', 'ProductController');

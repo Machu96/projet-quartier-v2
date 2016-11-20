@@ -20,4 +20,18 @@ class CatalogController extends Controller
 
         return view('catalog.index', compact('data'));
     }
+
+    public function filter($query){
+        $data = DB::table('shops')
+            ->join('products', 'shops.id', '=', 'products.shop_id')
+            ->select(
+                'shops.name as shopName',
+                'products.name as productName',
+                'products.stock as productStock',
+                'products.description as productDescription'
+            )
+            ->where('products.name', 'like', $query . '%')
+            ->get();
+        return $data;
+    }
 }
