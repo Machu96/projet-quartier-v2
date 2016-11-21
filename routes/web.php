@@ -15,10 +15,15 @@ Route::get('/', function () {
     return view('home.index');
 })->name('home');
 
+/*Panier*/
+Route::post('cart', 'CartController@addItem');
+Route::get('cart', 'CartController@getItem');
 
+/*Catalogue*/
 Route::get('catalog', 'CatalogController@index');
 Route::get('catalog/filter/{query}', 'CatalogController@filter');
 
+/*Trajet*/
 Route::get('journey', 'JourneyController@index');
 
 Route::resource('products', 'ProductController');

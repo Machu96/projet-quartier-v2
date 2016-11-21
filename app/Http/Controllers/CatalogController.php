@@ -11,6 +11,7 @@ class CatalogController extends Controller
         $data = DB::table('shops')
             ->join('products', 'shops.id', '=', 'products.shop_id')
             ->select(
+                'products.id as productId',
                 'shops.name as shopName',
                 'products.name as productName',
                 'products.stock as productStock',
@@ -25,12 +26,13 @@ class CatalogController extends Controller
         $data = DB::table('shops')
             ->join('products', 'shops.id', '=', 'products.shop_id')
             ->select(
+                'products.id as productId',
                 'shops.name as shopName',
                 'products.name as productName',
                 'products.stock as productStock',
                 'products.description as productDescription'
             )
-            ->where('products.name', 'like', $query . '%')
+            ->where('products.name', 'like', '%' . $query . '%')
             ->get();
         return $data;
     }
