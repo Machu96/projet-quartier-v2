@@ -19,6 +19,16 @@ Route::get('/', function () {
 Route::post('cart', 'CartController@addItem');
 Route::get('cart', 'CartController@getItem');
 
+Route::get('my-cart', 'CartController@index');
+
+Route::get('clearSession', function (){
+
+    session(['item' => []]);
+    return redirect()->back();
+
+});
+
+
 /*Catalogue*/
 Route::get('catalog', 'CatalogController@index');
 Route::get('catalog/filter/{query}', 'CatalogController@filter');

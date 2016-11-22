@@ -20,17 +20,21 @@
             <input name="name" id="name" type="text">
 
         </form>
+
+        <a href="{!! url('clearSession') !!}">Clear</a>
         
         <table class="table table-auto">
             @forelse($data as $d)
                 <tr>
                     <th>{{ $d->productName }}</th>
-                    <th>{{ $d->productDescription }}</th>
+                    <th>{{--{{ $d->productDescription }}--}}</th>
                     <th>Restant : {{ $d->productStock }}</th>
                     <th>
-                        {!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}
-                            <button class="add-cart-button" value="{{ $d->productId }}">Ajouter au panier</button>
-                        {!! Form::close() !!}
+                        <div class="add-cart-parent">
+                            {!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}
+                            <button class="add-cart-button" type="submit" value="{{ $d->productId }}">Ajouter au panier</button>
+                            {!! Form::close() !!}
+                        </div>
                     </th>
 
                 </tr>
@@ -55,24 +59,22 @@
         $(document).ready(function(){
 
             //Ajouter au panier
-            $('.add-cart-button').click(function(e){
+            $('.add-cart-button').on('click', function(e){
+
                 e.preventDefault();
 
-                console.log($($(e).currentTarget + 'input[name=_token]'))
                 $.post(
                     '{!! url('cart') !!}',
                     {
                         "id": e.target.value,
-                        "_token": $(e)
+                        "_token": $(e.target).parent()[0][0].value
                     }
-                ).then(function(e){
-                    console.log(e)
-                });
+                );
 
                 $.get(
-                        '{!! url('cart') !!}'
+                    '{!! url('cart') !!}'
                 ).then(function(response){
-                    console.log(response)
+                    console.log('response get', response)
                 });
 
             });
@@ -80,12 +82,14 @@
 
             //Filtrer les données
             $('#name').keyup(function(){
-                $.getJSON(
-                        '{!! url('catalog/filter') !!}/' + this.value
-                )
-                .then(function (response) {
-                    console.log(response)
-                })
+                if (this.value !== ''){
+                    $.getJSON(
+                            '{!! url('catalog/filter') !!}/' + this.value
+                    )
+                    .then(function (response) {
+                        console.log(response)
+                    })
+                }
             })
 
         });
