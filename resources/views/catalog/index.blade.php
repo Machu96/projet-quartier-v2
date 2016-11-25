@@ -49,7 +49,7 @@
 
 
             //Ajouter au panier
-            $('.add-cart-button').on('click', function(e){
+            $('table > tbody').on('click', '.add-cart-button',function(e){
 
                 e.preventDefault();
 
@@ -108,7 +108,7 @@
                             '<th>' +
                                 '<div class="add-cart-parent">' +
                                 '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
-                                '<button class="add-cart-button">Ajouter au panier</button>' +
+                                '<button class="add-cart-button" value="'+item.productId+'">Ajouter au panier</button>' +
                                 '{!! Form::close() !!}' +
                                 '</div>' +
                             '</th>' +
