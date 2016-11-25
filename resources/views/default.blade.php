@@ -28,6 +28,7 @@
                 <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
+                <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
                 <li>
                     <form id="flags-form" action="" method="get">
                         <button type="submit" name="lang" value="fr">

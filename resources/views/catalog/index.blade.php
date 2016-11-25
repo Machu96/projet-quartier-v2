@@ -24,25 +24,10 @@
         <a href="{!! url('clearSession') !!}">Clear</a>
         
         <table class="table table-auto">
-            @forelse($data as $d)
-                <tr>
-                    <th>{{ $d->productName }}</th>
-                    <th>{{--{{ $d->productDescription }}--}}</th>
-                    <th>Restant : {{ $d->productStock }}</th>
-                    <th>
-                        <div class="add-cart-parent">
-                            {!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}
-                            <button class="add-cart-button" type="submit" value="{{ $d->productId }}">Ajouter au panier</button>
-                            {!! Form::close() !!}
-                        </div>
-                    </th>
+            <thead>
 
-                </tr>
-            @empty
-
-                Aucun article correspondants
-
-            @endforelse
+            </thead>
+            <tbody></tbody>
         </table>
     </div>
 
@@ -58,8 +43,13 @@
     <script>
         $(document).ready(function(){
 
+            var $table = $('table').clone();
+
+            console.log($table)
+
+
             //Ajouter au panier
-            $('.add-cart-button').on('click', function(e){
+            $('table > tbody').on('click', '.add-cart-button',function(e){
 
                 e.preventDefault();
 
@@ -74,24 +64,62 @@
                 $.get(
                     '{!! url('cart') !!}'
                 ).then(function(response){
-                    console.log('response get', response)
+                    console.log(response);
                 });
 
             });
 
 
+
+
             //Filtrer les données
             $('#name').keyup(function(){
+                $('table > tbody > *').remove();
+
                 if (this.value !== ''){
                     $.getJSON(
                             '{!! url('catalog/filter') !!}/' + this.value
                     )
                     .then(function (response) {
-                        console.log(response)
+                        displayData(response);
                     })
                 }
-            })
+                else{
+                    loadProducts();
+                }
+            });
 
+            // First load
+
+            function loadProducts(){
+                $.getJSON(
+                        '{!! url('load-products') !!}'
+                )
+                .then(function (response) {
+                    displayData(response);
+                });
+            }
+
+            function displayData(data){
+                data.map(function (item) {
+                    var html =
+                        '<tr>' +
+                            '<th class="product-name">'+ item.productName +'</th>' +
+                            '<th class="product-description">'+ item.productDescription+'</th>' +
+                            '<th>' +
+                                '<div class="add-cart-parent">' +
+                                '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
+                                '<button class="add-cart-button" value="'+item.productId+'">Ajouter au panier</button>' +
+                                '{!! Form::close() !!}' +
+                                '</div>' +
+                            '</th>' +
+                        '</tr>';
+
+                    $('table > tbody').append(html);
+                });
+            }
+
+            loadProducts();
         });
     </script>
 
