@@ -22,6 +22,7 @@ class CatalogController extends Controller
                 'products.description as productDescription'
             )
             ->where('products.name', 'like', '%' . $query . '%')
+            ->orWhere('products.description', 'like', '%' . $query . '%')
             ->get();
 
         return $data;

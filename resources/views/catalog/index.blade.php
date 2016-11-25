@@ -105,6 +105,7 @@
                     var html =
                         '<tr>' +
                             '<th class="product-name">'+ item.productName +'</th>' +
+                            '<th class="product-description">'+ item.productDescription+'</th>' +
                             '<th>' +
                                 '<div class="add-cart-parent">' +
                                 '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
