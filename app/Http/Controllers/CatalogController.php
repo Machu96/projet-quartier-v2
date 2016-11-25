@@ -8,18 +8,7 @@ use Illuminate\Support\Facades\DB;
 class CatalogController extends Controller
 {
     public function index(){
-        $data = DB::table('shops')
-            ->join('products', 'shops.id', '=', 'products.shop_id')
-            ->select(
-                'products.id as productId',
-                'shops.name as shopName',
-                'products.name as productName',
-                'products.stock as productStock',
-                'products.description as productDescription'
-            )
-            ->get();
-
-        return view('catalog.index', compact('data'));
+        return view('catalog.index');
     }
 
     public function filter($query){
@@ -34,6 +23,20 @@ class CatalogController extends Controller
             )
             ->where('products.name', 'like', '%' . $query . '%')
             ->get();
+
         return $data;
+    }
+
+    public function getProducts(){
+        return DB::table('shops')
+            ->join('products', 'shops.id', '=', 'products.shop_id')
+            ->select(
+                'products.id as productId',
+                'shops.name as shopName',
+                'products.name as productName',
+                'products.stock as productStock',
+                'products.description as productDescription'
+            )
+            ->get();
     }
 }

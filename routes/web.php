@@ -31,6 +31,7 @@ Route::get('clearSession', function (){
 
 /*Catalogue*/
 Route::get('catalog', 'CatalogController@index');
+Route::get('load-products', 'CatalogController@getProducts');
 Route::get('catalog/filter/{query}', 'CatalogController@filter');
 
 /*Trajet*/
