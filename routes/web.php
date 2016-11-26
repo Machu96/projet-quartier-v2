@@ -43,11 +43,14 @@ Route::resource('events', 'EventController');
 Route::resource('places', 'PlaceController');
 Route::resource('orders', 'OrderController');
 
+Route::get('language/{lang}', function($lang){
+    App::setLocale($lang);
+    dd(App::getLocale());
+    return redirect()->back();
+});
 
 Route::group(['prefix' => 'admin'], function(){
 
-    Route::get('dashboard', function (){
-        return ['oui', 'non'];
-    });
+    Route::get('dashboard', 'DashboardController@index');
 
 });
