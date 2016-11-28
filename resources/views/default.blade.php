@@ -11,6 +11,7 @@
         {!! Html::style('css/style.css') !!}
         {!! Html::style('css/home.css') !!}
         {!! Html::style('css/parcours.css') !!}
+        {!! Html::style('css/produits.css') !!}
     </head>
 
     <body>
