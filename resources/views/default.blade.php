@@ -29,12 +29,15 @@
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
-                <li>
-                    <form id="flags-form" action="" method="get">
+                <li id="flags-form">
+                    <form action="{!! url('language/fr') !!}" method="GET">
+                        <input type="hidden" value="{{ csrf_token() }}" name="_token">
                         <button type="submit" name="lang" value="fr">
                             <svg class="flag" xmlns="http://www.w3.org/2000/svg" width="45" height="30"><rect width="45" height="30" fill="#ED2939"/><rect width="30" height="30" fill="#fff"/><rect width="15" height="30" fill="#002395"/></svg>
                         </button>
-
+                    </form>
+                    <form action="{!! url('language/en') !!}" method="GET">
+                        <input type="hidden" value="{{ csrf_token() }}" name="_token">
                         <button type="submit" name="lang" value="en">
                             <svg class="flag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="50" height="30">
                                 <clipPath id="t">
