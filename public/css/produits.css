@@ -18,3 +18,10 @@ background-color : rgba(43, 117, 152, 0.25);
     height: 200px;
     background-color: #E8E8E8;
 }
+
+.add-cart-button{
+background-color: white;
+border-radius: 10px;
+border: solid 2px #3E67B7;
+outline: none;
+}

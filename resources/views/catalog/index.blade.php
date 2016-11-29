@@ -13,6 +13,7 @@
     {{-- Mettre le contenu ici --}}
     <h2>Titre exemple</h2>
     <div style="background-color: white;">
+        <div class="ptm mlm">
             <form method="get" action="{!! url('CatalogController@filter') !!}">
 
                 <label for="name">Nom de l'article</label>
@@ -21,7 +22,7 @@
             </form>
 
             <a href="{!! url('clearSession') !!}">Clear</a>
-
+        </div>
         <div>
             <div id="product-grid" class="flex-container"></div>
         </div>
@@ -108,7 +109,7 @@
                             '<h5 class="product-name txtcenter">'+ item.productName +'</h5>' +
                             '<div class="product-image center w90"></div>' +
                             '<p class="product-description prs pls">'+ item.productDescription+'</p>' +
-                            '<div class=" mts txtcenter">' +
+                            '<div class=" mts mbs txtcenter">' +
                                 '<div class="add-cart-parent">' +
                                 '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
                                 '<button class="add-cart-button" value="'+item.productId+'">Ajouter au panier</button>' +
