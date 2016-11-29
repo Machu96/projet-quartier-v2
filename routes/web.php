@@ -54,3 +54,4 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('dashboard', 'DashboardController@index');
 
 });
+
