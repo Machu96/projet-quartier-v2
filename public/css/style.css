@@ -110,6 +110,10 @@ body {
 	outline: none;
 }
 
+#flags-form > form{
+	display: inline-block;
+}
+
 
 /*--------------------------------------------------
 	TEXT + MAP
