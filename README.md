@@ -6,7 +6,8 @@
 - Laravel 5.3
 - MySQL
 - jQuery 3
-- Knacss
+- Knacss - Utilisateur
+- Bootstrap - Admin
 
 
 ## Install
