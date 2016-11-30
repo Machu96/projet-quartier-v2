@@ -51,7 +51,9 @@ Route::get('language/{lang}', function($lang){
 
 Route::group(['prefix' => 'admin'], function(){
 
-    Route::get('dashboard', 'DashboardController@index');
+    Route::get('analytics', 'DashboardController@analytics');
+    Route::get('event', 'DashboardController@event');
+    Route::get('shop', 'DashboardController@shop');
 
 });
 
