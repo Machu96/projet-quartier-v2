@@ -28,6 +28,14 @@ class DashboardController extends Controller
                 'products.description as productDescription'
             )
             ->get();
-        return view('dashboard.shop', compact('products'));
+
+        $shops = DB::table('shops')->get();
+        return view('dashboard.shop', compact('products', 'shops'));
+    }
+
+    public function getShops($query){
+        return DB::table('shops')
+            ->where('name', 'like', '%' . $query . '%')
+            ->get();
     }
 }

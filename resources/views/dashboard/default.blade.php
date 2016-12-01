@@ -24,6 +24,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     {!! Html::style('dashboard/dist/css/skins/skin-blue.min.css') !!}
+
+    @yield('css')
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -87,9 +89,7 @@ desired effect
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active">
-                    <a href="{!! url('admin/analytics') !!}"><i class="fa fa-dashboard"></i> <span>Analyse de onnées</span></a>
-                </li>
+                <li><a href="{!! url('admin/analytics') !!}"><i class="fa fa-dashboard"></i> <span>Analyse de onnées</span></a></li>
                 <li><a href="{!! url('admin/event') !!}"><i class="fa  fa-calendar"></i> <span>Événements</span></a></li>
                 <li><a href="{!! url('admin/shop') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des produits</span></a></li>
             </ul>
@@ -128,11 +128,32 @@ desired effect
 </div>
 <!-- ./wrapper -->
 
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            @yield('modal')
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <!-- REQUIRED JS SCRIPTS -->
 
 {!! Html::script('dashboard/plugins/jQuery/jquery-2.2.3.min.js') !!}
 {!! Html::script('dashboard/bootstrap/js/bootstrap.min.js') !!}
 {!! Html::script('dashboard/dist/js/app.min.js') !!}
+
+@yield('script')
+
+<script>
+    $(document).ready(function(){
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    });
+</script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

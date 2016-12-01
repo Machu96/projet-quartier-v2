@@ -80,6 +80,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
+        return 'oui';
     }
 }
