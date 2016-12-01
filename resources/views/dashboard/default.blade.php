@@ -26,6 +26,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     {!! Html::style('dashboard/dist/css/skins/skin-blue.min.css') !!}
 
     @yield('css')
+
+    <style>
+        aside{
+            position: fixed !important;
+        }
+    </style>
 </head>
 <!--
 BODY TAG OPTIONS:

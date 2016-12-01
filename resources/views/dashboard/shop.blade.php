@@ -95,8 +95,7 @@
             </select>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-            <button type="submit" class="btn btn-default">Ajouter</button>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
         </div>
     {!! Form::close() !!}
 
@@ -114,18 +113,16 @@
             allowClear: true
         });
 
-        $('.add-product').on('click', function(e){
+        /*$('.add-product').on('click', function(e){
 
             $.post('products', {
                 '_token': e
             });
 
-        });
+        });*/
 
         $('.delete-product').on('click', function(e){
             e.preventDefault();
-
-            console.log($(e.target).parent());
 
             $.ajax({
                 url: '{!! url('products') !!}/' + e.target.value,
@@ -133,7 +130,7 @@
                 data: {
                     '_token': $(e.target).parent()[0][1].value
                 }
-            }).then(function(response){
+            }).then(function(){
                 $(e.target).parent().parent().parent().remove();
             });
         });

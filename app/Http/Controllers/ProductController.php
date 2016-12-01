@@ -80,7 +80,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
-        return 'oui';
+        DB::table('products')->where('id', '=', $id)->delete();
     }
 }
