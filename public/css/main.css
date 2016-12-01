@@ -1,0 +1,591 @@
+/*--------------------------------------------------
+	FONTS
+--------------------------------------------------*/
+
+@font-face {
+    font-family: "TWCentMT";
+    src: url('../fonts/TWcenMT.ttf');
+}
+@font-face {
+    font-family:"Playfair Display" ;
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: "FjallaOne";
+    src: url('../fonts/FjallaOne-Regular.ttf');
+}
+@font-face {
+    font-family: "YanoneKaffeesatz";
+    src: url('../fonts/YanoneKaffeesatz-Regular.ttf');
+}
+@font-face {
+    font-family: "TWcenMT";
+    src: url('../fonts/TWcenMT.ttf');
+}
+/*--------------------------------------------------
+	GLOBAL
+--------------------------------------------------*/
+html body{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+body {
+    font-family:"Playfair Display" ;
+    background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
+    background-size: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+h2{
+    font-family: "Playfair Display";
+    font-weight: normal;
+}
+iframe{
+    border:0;
+}
+.container-text ul{
+    list-style: none;
+}
+.container-text li{
+    margin-top:5px;
+}
+
+
+
+/*--------------------------------------------------
+	MENU
+--------------------------------------------------*/
+
+.menu {
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.menu li{
+    font-family: TWCentMT, sans-serif;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.menu a, .menu a:hover{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.sub-menu li {
+    display: inline-block;
+}
+/*--------------------------------------------------
+	CONTAINER
+--------------------------------------------------*/
+.container {
+    width: 80%;
+    margin: auto;
+}
+/*--------------------------------------------------
+	HEADER-PAGE
+--------------------------------------------------*/
+.header-mt{
+    margin-top:15%;
+}
+.page-title{
+    font-family: "Playfair Display";
+    font-weight: normal;
+    background-color: #efefef;
+    box-shadow: 0px 0px 20px #000000;
+    margin: 0.3em;
+}
+#home_title_1{
+    padding: 5px 65px 5px 65px;
+    transform: rotate(-1deg);
+}
+#home_title_2{
+    padding: 5px 65px 5px 65px;
+    transform: rotate(1deg);
+}
+
+
+
+/*--------------------------------------------------
+	Drapeaux
+--------------------------------------------------*/
+
+.flag{
+    opacity: 0.6;
+}
+
+.flag-active{
+    opacity: 0.8;
+}
+
+.flag:hover{
+    opacity: 0.8;
+}
+
+.flag-active, .flag{
+    height: 100%;
+}
+
+#flags-form button, #flags-form button:focus, #flags-form button:active{
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+/*--------------------------------------------------
+	HOME PAGE
+--------------------------------------------------*/
+#home_page{
+    height: 90vh;
+    text-align: center;
+}
+#button_parcours{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 3px 35px 3px 35px;
+    font-family: "TWcenMT",sans-serif;
+    color: #FFFFFF;
+    box-shadow: 1px 1px 7px #000;
+    font-size: 1em;
+    line-height: 2.2em;
+}
+
+#map_icon{
+    width: 28px;
+    height: 28px;
+    /*margin: 0;*/
+    position: relative;
+    float: right;
+    margin-left: 1em;
+    top: 4px;
+}
+#home_history{
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+    /*height: 100%;*/
+    box-shadow: 0px 0px 10px;
+}
+
+#home_history_triangle{
+    position: absolute;
+    margin: 0 auto;
+    width: 8vh;
+    height: 8vh;
+    left: 48%;
+    transform: rotate(45deg);
+    background-color: #FFFFFF;
+    top: -15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px;
+}
+#home_history_square{
+    position: absolute;
+    margin: 0 auto;
+    width: 600px;
+    height: 300px;
+    left: 44%;
+    background-color: #FFFFFF;
+    text-align: center;
+    z-index:0;
+
+}
+.overlay {
+    background:transparent;
+    position:relative;
+    width: 600px;
+    height:400px; /* your iframe height */
+    top:400px;  /* your iframe height */
+    margin-top:-400px;  /* your iframe height */
+}
+/*******************************************************************************
+                                EVENT SECTION
+ ******************************************************************************/
+#event_container{
+    display: flex;
+    flex-direction: row;
+    background: url("../img/fond-event.png") no-repeat top center scroll;
+    background-size: 100%;
+    width: 100%;
+    padding: 60px 0px 60px 0px;
+}
+.event{
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #f6f6ec;
+    width: 230px;
+    height: 150px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+    padding: 5px 5px 0 15px;
+}
+.event-header{
+    flex: 7;
+    margin-top: 3px;
+}
+
+.event-title{
+    font-family: "FjallaOne", Arial, sans-serif;
+    color: #306aa0;
+    font-size: 1.25em;
+}
+
+.event-place{
+    font-family: "FjallaOne", Arial, sans-serif;
+    color: #3c3c3c;
+    font-size: 1.25em;
+}
+
+.event-hour{
+    font-family: "YanoneKaffeesatz", "Comic Sans MS", cursive;
+    font-size: 0.8em;
+}
+
+.event-date{
+    flex: 2;
+    font-family: "FjallaOne", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    background-color: #3d3c38;
+    text-align: center;
+    color: #FFFFFF;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.event-date .month{
+    font-size: 0.7em;
+    flex: 2;
+    background-color: #82827b;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+
+}
+.event-date .day{
+    flex: 7;
+    line-height: 1.15em;
+    font-size: 1.9em;
+    padding: 0;
+    margin: 0;
+}
+.event-date .dayWeek{
+    flex: 3;
+    font-size: 0.7em;
+}
+/*******************************************************************************
+                                DATA-VISION SECTION
+ ******************************************************************************/
+
+#datavision_container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 10px;
+    width: 100%;
+    padding: 10px 70px 10px 70px;
+}
+
+.home-datavision{
+    flex: 1;
+    margin: 50px;
+    font-family: "FjallaOne";
+    color: #56554e;
+    text-align: center;
+}
+.home-datavision-number{
+    font-size: 6em;
+}
+
+
+/*--------------------------------------------------
+	MA VISITE
+--------------------------------------------------*/
+#section-parcours{
+    background-color: white;
+    width:100%;
+}
+#parcours-menu{
+    font-size:20px;
+}
+#parcours-menu li{
+    display: inline;
+}
+#parcours-menu li > a{
+    padding-right:10vw;
+}
+.copy-link-map{
+    margin-top:20px;
+    width:100%;
+}
+.map{
+    width:100%;
+    height:500px;
+}
+#link-map input{
+    width:70%;
+    font-family:TW Cen MTRegular;
+}
+#link-map button{
+    margin-left: 3%;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/*--------------------------------------------------
+	CATALOGUE
+--------------------------------------------------*/
+
+.product-description{
+    word-wrap: break-word;
+}
+
+.inner-grid{
+    border: 1px solid #bebebe;
+    border-bottom-width: 3px;
+}
+
+.product-name{
+    background-color : rgba(43, 117, 152, 0.25);
+}
+.product-image{
+    height: 200px;
+    background-color: #E8E8E8;
+}
+
+.add-cart-button{
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px #3E67B7;
+    outline: none;
+}
+/*--------------------------------------------------
+	TEXT + MAP
+--------------------------------------------------*/
+
+.container-text {
+    width: 40%;
+    padding:40px ;
+    font-family: calibri light;
+    z-index: 4;
+}
+.container-map{
+    position: relative;
+    width:49%;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+/*--------------------------------------------------
+	Flexbox
+--------------------------------------------------*/
+/*Pour le header de toutes les pages*/
+.flex-container-column{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*-------*/
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: flex-end;
+}
+
+.flex-container > .flex-item{
+    width: 30%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.flex > .w30{
+    width: 30%;
+}
+
+.flex > .w50{
+    width: 50%;
+    margin: auto;
+}
+/*--------------------------------------------------
+	FOOTER
+--------------------------------------------------*/
+
+footer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    position: absolute;
+}
+footer p {
+    font-family: Tw Cen MT Regular;
+    text-align: center;
+}
+/*--------------------------------------------------
+KEY FRAME
+--------------------------------------------------*/
+/*----------------MA VISITE-----------------------*/
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/*--------------------------------------------------
+Media Queries
+--------------------------------------------------*/
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+
+}
+@media only screen and (max-width:770px){
+    .container-text{
+        width: auto;
+    }
+    .container-map{
+        width:90%;
+    }
+    #parcours-menu li{
+        text-align: center;
+        margin-right:0!important;
+        display: block!important;
+    }
+    #parcours-menu a{
+        width:100%;
+    }
+
+}
+/*--------------------------------------------------
+Aide
+--------------------------------------------------*/
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+/*--------------------------------------------------
+Impression
+--------------------------------------------------*/
+
+@media print {*,*:before,*:after {background: transparent !important;color: #000 !important;box-shadow: none !important;text-shadow: none !important;}a,a:visited {text-decoration: underline;}a[href]:after {content: " (" attr(href) ")";}abbr[title]:after {content: " (" attr(title) ")";}a[href^="#"]:after,a[href^="javascript:"]:after {content: "";}pre,blockquote {border: 1px solid #999;page-break-inside: avoid;}thead {display: table-header-group;}tr,img {page-break-inside: avoid;}img {max-width: 100% !important;}p,h2,h3 {orphans: 3;widows: 3;}h2,h3 {page-break-after: avoid;}}
+
+
+/*--------------------------------------------------
+Normalize
+--------------------------------------------------*/
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:1.7em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
