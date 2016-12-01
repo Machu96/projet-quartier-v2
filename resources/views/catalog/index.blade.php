@@ -11,8 +11,12 @@
 @section('content')
 
     {{-- Mettre le contenu ici --}}
-    <h2>Titre exemple</h2>
-    <div style="background-color: white;">
+    <div class="header-mt">
+        <div class="flex-container-column">
+            <h1 class="page-title" id="home_title_1">Nos produits</h1>
+        </div>
+    </div>
+    <div style="background-color: white;" class="header-mt">
         <div class="ptm mlm">
             <form method="get" action="{!! url('CatalogController@filter') !!}">
 

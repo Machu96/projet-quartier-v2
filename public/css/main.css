@@ -54,14 +54,8 @@ iframe{
 .container-text li{
     margin-top:5px;
 }
-/*COMME H2*/
-.page-title{
-    font-family: "Playfair Display";
-    font-weight: normal;
-    background-color: #efefef;
-    box-shadow: 0px 0px 20px #000000;
-    margin: 0.3em;
-}
+
+
 
 /*--------------------------------------------------
 	MENU
@@ -103,6 +97,16 @@ iframe{
 /*--------------------------------------------------
 	HEADER-PAGE
 --------------------------------------------------*/
+.header-mt{
+    margin-top:15%;
+}
+.page-title{
+    font-family: "Playfair Display";
+    font-weight: normal;
+    background-color: #efefef;
+    box-shadow: 0px 0px 20px #000000;
+    margin: 0.3em;
+}
 #home_title_1{
     padding: 5px 65px 5px 65px;
     transform: rotate(-1deg);
@@ -112,30 +116,7 @@ iframe{
     transform: rotate(1deg);
 }
 
-#home_page{
-    height: 90vh;
-    text-align: center;
-}
-#button_parcours{
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    padding: 3px 35px 3px 35px;
-    font-family: "TWcenMT",sans-serif;
-    color: #FFFFFF;
-    box-shadow: 1px 1px 7px #000;
-    font-size: 1em;
-    line-height: 2.2em;
-}
 
-#map_icon{
-    width: 28px;
-    height: 28px;
-    /*margin: 0;*/
-    position: relative;
-    float: right;
-    margin-left: 1em;
-    top: 4px;
-}
 
 /*--------------------------------------------------
 	Drapeaux
@@ -166,7 +147,30 @@ iframe{
 /*--------------------------------------------------
 	HOME PAGE
 --------------------------------------------------*/
+#home_page{
+    height: 90vh;
+    text-align: center;
+}
+#button_parcours{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 3px 35px 3px 35px;
+    font-family: "TWcenMT",sans-serif;
+    color: #FFFFFF;
+    box-shadow: 1px 1px 7px #000;
+    font-size: 1em;
+    line-height: 2.2em;
+}
 
+#map_icon{
+    width: 28px;
+    height: 28px;
+    /*margin: 0;*/
+    position: relative;
+    float: right;
+    margin-left: 1em;
+    top: 4px;
+}
 #home_history{
     position: relative;
     width: 100%;
@@ -313,7 +317,6 @@ iframe{
 --------------------------------------------------*/
 #section-parcours{
     background-color: white;
-    margin-top: 250px;
     width:100%;
 }
 #parcours-menu{

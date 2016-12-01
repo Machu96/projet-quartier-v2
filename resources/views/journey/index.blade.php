@@ -3,11 +3,13 @@
 
 @section('content')
 
-    <div id="Section">
-        <div class="title"><h1>Organisez votre parcours</h1></div>
+    <div class="header-mt">
+        <div class="flex-container-column">
+        <h1 class="page-title" id="home_title_1">Organisez votre parcours</h1>
+        </div>
     </div>
 
-    <div id="section-parcours">
+    <div id="section-parcours" class="header-mt">
         <ul id="parcours-menu" class="tab">
             <li><a id="defaultOpen" href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours1')">Parcours 1h</a></li>
             <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours2')">Parcours 2h</a></li>
