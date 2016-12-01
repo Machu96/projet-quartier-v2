@@ -58,7 +58,7 @@
             </div>
             <?php */} ?>
         </div>
-        <div id="datavision_container">
+        <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
                 <div class="home-datavision-number">352</div>
                 <div class="home-datavision-description">monuments culturels</div>

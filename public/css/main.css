@@ -194,21 +194,18 @@ iframe{
 #home_history_square{
     position: absolute;
     margin: 0 auto;
-    width: 600px;
-    height: 300px;
-    left: 44%;
+    width: 49%;
+    height: 90px;
+    left: 31%;
     background-color: #FFFFFF;
-    text-align: center;
     z-index:0;
 
 }
 .overlay {
-    background:transparent;
-    position:relative;
-    width: 600px;
-    height:400px; /* your iframe height */
-    top:400px;  /* your iframe height */
-    margin-top:-400px;  /* your iframe height */
+    position: absolute;
+    height: 500px;
+    width: 100%;
+
 }
 /*******************************************************************************
                                 EVENT SECTION
@@ -216,8 +213,9 @@ iframe{
 #event_container{
     display: flex;
     flex-direction: row;
-    background: url("../img/fond-event.png") no-repeat top center scroll;
-    background-size: 100%;
+    background: url("../img/fond-event.png");
+    background-attachment:fixed;
+    background-size: cover;
     width: 100%;
     padding: 60px 0px 60px 0px;
 }
@@ -292,8 +290,6 @@ iframe{
  ******************************************************************************/
 
 #datavision_container{
-    display: flex;
-    flex-direction: row;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 10px;
     width: 100%;
