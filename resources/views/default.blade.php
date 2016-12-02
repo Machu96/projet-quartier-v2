@@ -29,6 +29,7 @@
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
+                <li><button id="pdf">PDF</button></li>
                 <li id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -62,5 +63,24 @@
 
         {!! Html::script('js/jquery.js') !!}
         @yield('script')
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('#pdf').on('click', function(){
+
+                    $.get('{!! url('bill') !!}')
+                        .then(function(response){
+                            var doc = new jsPDF();
+                            doc.text(response, 10, 10)
+                            doc.save('a4.pdf')
+                            console.log(reponse)
+                        });
+
+                });
+
+            });
+        </script>
     </body>
 </html>
