@@ -57,7 +57,9 @@
         <div>
             @yield('content')
         </div>
-
+        <footer>
+            <span>Copyright VieuxLyon 2016 - <a href="#">Mentions légales</a> - Institut G4</span>
+        </footer>
 
         {!! Html::script('js/jquery.js') !!}
         @yield('script')

@@ -464,14 +464,16 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 footer{
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-top:7px;
     height:40px;
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     position: absolute;
-}
-footer p {
-    font-family: Tw Cen MT Regular;
     text-align: center;
+}
+footer span {
+    font-family: Tw Cen MT Regular;
+
 }
 /*--------------------------------------------------
 KEY FRAME
