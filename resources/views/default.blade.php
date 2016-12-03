@@ -29,6 +29,7 @@
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
+                <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
                 <li id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
