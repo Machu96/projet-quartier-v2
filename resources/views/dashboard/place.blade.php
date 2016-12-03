@@ -13,8 +13,14 @@
 
     <div class="input-group">
         <label for="name">Nom</label>
-        <input class="form-control" type="text">
+        <input name="name" id="name" class="form-control" type="text">
     </div>
+    
+    <div class="input-group">
+        <label for="creation_date">Date de création</label>
+        <input type="date" name="creation_date" id="creation_date" class="form-control">
+    </div>
+    
     <div class="input-group">
         <label for="description">Description</label>
         <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>

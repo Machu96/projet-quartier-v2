@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Place;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -39,9 +40,14 @@ class PlaceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Place $place)
     {
-        //
+        $place->name = $request->name;
+        $place->description = $request->description;
+        $place->creation_date = $request->creation_date;
+
+        $place->save();
+        return redirect()->back();
     }
 
     /**
