@@ -1,6 +1,16 @@
 @extends('dashboard.default')
 
 
+@section('content-header')
+
+    <h1>
+        Récapitulatif
+        <small>Optional description</small>
+    </h1>
+
+@endsection
+
+
 @section('content')
 
     <div class="row">

@@ -98,6 +98,7 @@ desired effect
                 <li><a href="{!! url('admin/analytics') !!}"><i class="fa fa-dashboard"></i> <span>Analyse de onnées</span></a></li>
                 <li><a href="{!! url('admin/event') !!}"><i class="fa  fa-calendar"></i> <span>Événements</span></a></li>
                 <li><a href="{!! url('admin/shop') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des produits</span></a></li>
+                <li><a href="{!! url('admin/place') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des lieux</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
         </section>
@@ -108,10 +109,7 @@ desired effect
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>
-                Page Header
-                <small>Optional description</small>
-            </h1>
+            @yield('content-header')
         </section>
 
         <!-- Main content -->

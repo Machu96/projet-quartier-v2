@@ -23,7 +23,7 @@
                             <th>Produit</th>
                             <th>Stock</th>
                             <th>Magasin</th>
-                            <th><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Launch modal</button></th>
+                            <th><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Ajouter</button></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -74,28 +74,44 @@
 
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">Ajouter un produit</h4>
     </div>
-    {!! Form::open(['method' => 'post', 'url' => url('products'), 'class' => 'add-product']) !!}
+    {!! Form::open(['url' => url('products'), 'method' => 'post']) !!}
         <div class="modal-body">
 
-            <input name="name" type="text" class="form-control">
-            <input name="stock" type="number" class="form-control">
+            <div class="input-group">
+                <label for="name">Nom</label>
+                <input name="name" type="text" class="form-control">
+            </div>
+            
+            <div class="input-group">
+                <label for="stock">Stock disponible</label>
+                <input name="stock" type="number" class="form-control">
+            </div>
 
-            <select class="form-control select2 select2-hidden-accessible " style="width: 100%;" tabindex="-1" aria-hidden="true">
-                @forelse($shops as $shop)
+            <div class="input-group">
+                <label for="description">Description</label>
+                <textarea name="description" cols="30" rows="10" class="form-control"></textarea>
+            </div>
 
-                    <option value="{{ $shop->id }}">{{ $shop->name }}</option>
+            <div class="input-group">
+                <label for="shop_id">Magasin vendant le produit</label>
+                <select name="shop_id" class="form-control select2 select2-hidden-accessible " style="width: 100%;" tabindex="-1" aria-hidden="true">
+                    @forelse($shops as $shop)
 
-                @empty
+                        <option value="{{ $shop->id }}">{{ $shop->name }}</option>
 
-                    Aucun resultat correspondant
+                    @empty
 
-                @endforelse
-            </select>
+                        Aucun resultat correspondant
+
+                    @endforelse
+                </select>
+            </div>
+
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Ajouter</button>
+            <button type="submit" class="btn btn-primary add-product">Ajouter</button>
         </div>
     {!! Form::close() !!}
 
@@ -113,13 +129,30 @@
             allowClear: true
         });
 
-        /*$('.add-product').on('click', function(e){
+        $('.add-product').on('click', function(e){
+            e.preventDefault();
+            var form = $(e.target).parent().parent()[0];
+            var token = form[0]
+            var name = form[1];
+            var stock = form[2];
+            var description = form[3];
+            var shop_id = form[4];
 
-            $.post('products', {
-                '_token': e
-            });
+           $.post('{!! url('products') !!}', {
+                '_token': token.value,
+                'stock': stock.value,
+                'name': name.value,
+                'description': description.value,
+                'shop_id': shop_id.value
+            }).then(function(){
+               alert('Produit ajouté')
+               console.log()
+               stock.value = '';
+               name.value = '';
+               description.value = '';
+           });
 
-        });*/
+        });
 
         $('.delete-product').on('click', function(e){
             e.preventDefault();
