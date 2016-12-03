@@ -404,6 +404,41 @@ ul.tab li a:focus, .active {background-color: #ccc;}
     outline: none;
 }
 /*--------------------------------------------------
+	BAR RESTO
+--------------------------------------------------*/
+.element-wrap{
+    background-color: white;
+}
+.wrap-title{
+    background-color: white;
+
+}
+.wrap-title h2{
+    padding:8px;
+    margin-left:40px;
+}
+.wrap-picture{
+    margin-top: -23px;
+
+}
+.wrap-picture-inside {
+    background-size: cover;
+    height: 200px;
+}
+.wrap-text{
+    height: 140px;
+    text-align: center;
+    padding:20px;
+    overflow:hidden;
+}
+.wrap-text-inner{
+    height:100%;
+}
+.map-wrap{
+    display: none;
+}
+
+/*--------------------------------------------------
 	TEXT + MAP
 --------------------------------------------------*/
 
