@@ -32,6 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             position: fixed !important;
         }
     </style>
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -99,6 +100,7 @@ desired effect
                 <li><a href="{!! url('admin/event') !!}"><i class="fa  fa-calendar"></i> <span>Événements</span></a></li>
                 <li><a href="{!! url('admin/shop') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des produits</span></a></li>
                 <li><a href="{!! url('admin/place') !!}"><i class="fa fa-map"></i> <span>Gestion des lieux</span></a></li>
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>
@@ -109,7 +111,9 @@ desired effect
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
+
             @yield('content-header')
+
         </section>
 
         <!-- Main content -->
@@ -132,6 +136,7 @@ desired effect
 </div>
 <!-- ./wrapper -->
 
+<<<<<<< HEAD
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -142,12 +147,15 @@ desired effect
 </div><!-- /.modal -->
 
 
+=======
+>>>>>>> 054e657f69c3c928c6300eb39272da0096de3f43
 <!-- REQUIRED JS SCRIPTS -->
 
 {!! Html::script('dashboard/plugins/jQuery/jquery-2.2.3.min.js') !!}
 {!! Html::script('dashboard/bootstrap/js/bootstrap.min.js') !!}
 {!! Html::script('dashboard/dist/js/app.min.js') !!}
 
+<<<<<<< HEAD
 @yield('script')
 
 <script>
@@ -159,6 +167,8 @@ desired effect
     });
 </script>
 
+=======
+>>>>>>> 054e657f69c3c928c6300eb39272da0096de3f43
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the

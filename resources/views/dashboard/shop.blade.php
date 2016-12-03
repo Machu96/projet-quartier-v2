@@ -1,11 +1,14 @@
 @extends('dashboard.default')
 
+<<<<<<< HEAD
 @section('css')
 
     {!! Html::style('dashboard/plugins/select2/select2.min.css') !!}
 
 @endsection
 
+=======
+>>>>>>> 054e657f69c3c928c6300eb39272da0096de3f43
 
 @section('content')
 
@@ -23,15 +26,31 @@
                             <th>Produit</th>
                             <th>Stock</th>
                             <th>Magasin</th>
+<<<<<<< HEAD
                             <th><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Ajouter</button></th>
                         </tr>
                         </thead>
                         <tbody>
+=======
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            {!! Form::open(['method' => 'post', 'url' => url('products')]) !!}
+                            <td><input name="name" type="text" class="form-control"></td>
+                            <td><input name="stock" type="number" class="form-control"></td>
+                            <td><input name="shop" type="text" class="form-control"></td>
+                            <td><button type="submit" class="btn btn-default">Ajouter</button></td>
+                            {!! Form::close() !!}
+                        </tr>
+>>>>>>> 054e657f69c3c928c6300eb39272da0096de3f43
                         @forelse($products as $product)
                             <tr>
                                 <td>{{ $product->productName }}</td>
                                 <td>{{ $product->productStock }}</td>
                                 <td>{{ $product->shopName }}</td>
+<<<<<<< HEAD
                                 <td>
                                     {!! Form::open(['method' => 'delete', 'url' => url('products', $product->productId)]) !!}
 
@@ -39,6 +58,8 @@
 
                                     {!! Form::close() !!}
                                 </td>
+=======
+>>>>>>> 054e657f69c3c928c6300eb39272da0096de3f43
                             </tr>
                         @empty
 
@@ -68,6 +89,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
 @endsection
 
 @section('modal')
@@ -172,4 +194,6 @@
     });
     </script>
 
+=======
+>>>>>>> 054e657f69c3c928c6300eb39272da0096de3f43
 @endsection

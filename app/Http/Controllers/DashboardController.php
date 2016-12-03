@@ -29,6 +29,7 @@ class DashboardController extends Controller
             )
             ->get();
 
+
         $shops = DB::table('shops')->get();
         return view('dashboard.shop', compact('products', 'shops'));
     }

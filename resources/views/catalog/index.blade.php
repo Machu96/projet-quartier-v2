@@ -11,25 +11,31 @@
 @section('content')
 
     {{-- Mettre le contenu ici --}}
-    <h2>Titre exemple</h2>
-    <div style="background-color: white">
-
-        <form method="get" action="{!! url('CatalogController@filter') !!}">
-
-            <label for="name">Nom de l'article</label>
-            <input name="name" id="name" type="text">
-
-        </form>
-
-        <a href="{!! url('clearSession') !!}">Clear</a>
-        
-        <table class="table table-auto">
-            <thead>
-
-            </thead>
-            <tbody></tbody>
-        </table>
+    <div class="header-mt">
+        <div class="flex-container-column">
+            <h1 class="page-title" id="home_title_1">Nos produits</h1>
+        </div>
     </div>
+    <div style="background-color: white;" class="header-mt">
+        <div class="ptm mlm">
+            <form method="get" action="{!! url('CatalogController@filter') !!}">
+
+                <label for="name">Nom de l'article</label>
+                <input name="name" id="name" type="text">
+
+            </form>
+
+            <a href="{!! url('clearSession') !!}">Clear</a>
+        </div>
+        <div>
+            <div id="product-grid" class="flex-container"></div>
+        </div>
+
+    </div>
+
+
+
+
 
 @endsection
 
@@ -49,7 +55,7 @@
 
 
             //Ajouter au panier
-            $('table > tbody').on('click', '.add-cart-button',function(e){
+            $('#product-grid ').on('click', '.add-cart-button',function(e){
 
                 e.preventDefault();
 
@@ -74,15 +80,15 @@
 
             //Filtrer les données
             $('#name').keyup(function(){
-                $('table > tbody > *').remove();
+                $('#product-grid > *').remove();
 
                 if (this.value !== ''){
                     $.getJSON(
-                            '{!! url('catalog/filter') !!}/' + this.value
+                        '{!! url('catalog/filter') !!}/' + this.value
                     )
-                    .then(function (response) {
-                        displayData(response);
-                    })
+                        .then(function (response) {
+                            displayData(response);
+                        })
                 }
                 else{
                     loadProducts();
@@ -93,29 +99,30 @@
 
             function loadProducts(){
                 $.getJSON(
-                        '{!! url('load-products') !!}'
+                    '{!! url('load-products') !!}'
                 )
-                .then(function (response) {
-                    displayData(response);
-                });
+                    .then(function (response) {
+                        displayData(response);
+                    });
             }
 
             function displayData(data){
                 data.map(function (item) {
                     var html =
-                        '<tr>' +
-                            '<th class="product-name">'+ item.productName +'</th>' +
-                            '<th class="product-description">'+ item.productDescription+'</th>' +
-                            '<th>' +
-                                '<div class="add-cart-parent">' +
-                                '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
-                                '<button class="add-cart-button" value="'+item.productId+'">Ajouter au panier</button>' +
-                                '{!! Form::close() !!}' +
-                                '</div>' +
-                            '</th>' +
-                        '</tr>';
+                        '<div class=" inner-grid mtl w400p">' +
+                        '<h5 class="product-name txtcenter">'+ item.productName +'</h5>' +
+                        '<div class="product-image center w90"></div>' +
+                        '<p class="product-description prs pls">'+ item.productDescription+'</p>' +
+                        '<div class=" mts mbs txtcenter">' +
+                        '<div class="add-cart-parent">' +
+                        '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
+                        '<button class="add-cart-button" value="'+item.productId+'">Ajouter au panier</button>' +
+                        '{!! Form::close() !!}' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
 
-                    $('table > tbody').append(html);
+                    $('#product-grid').append(html);
                 });
             }
 

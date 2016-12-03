@@ -24,6 +24,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request, Product $product){
         $product->name = $request->name;
         $product->description = $request->description;

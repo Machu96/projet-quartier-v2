@@ -8,9 +8,8 @@
         <title>Laravel</title>
 
         {!! Html::style('css/knacss.css') !!}
-        {!! Html::style('css/style.css') !!}
-        {!! Html::style('css/home.css') !!}
-        {!! Html::style('css/parcours.css') !!}
+        {!! Html::style('css/main.css') !!}
+
     </head>
 
     <body>
@@ -59,7 +58,11 @@
         <div>
             @yield('content')
         </div>
-
+        <div id="footer-picture">
+        <footer>
+            <span>Copyright VieuxLyon 2016 - <a href="#">Mentions légales</a> - Institut G4</span>
+        </footer>
+            </div>
 
         {!! Html::script('js/jquery.js') !!}
         @yield('script')
