@@ -517,10 +517,20 @@ Media Queries
         margin-right:0!important;
         display: block!important;
     }
-    #parcours-menu a{
-        width:100%;
+    #parcours-menu a {
+        width: 100%;
     }
+}
+@media only screen and (max-width:544px) {
+    #home_title_1, #home_title_2 {
+        font-size: 0.9em;
+    }
+}
+@media only screen and (max-width:360px) {
 
+    #map_icon{
+        float: initial;
+    }
 }
 /*--------------------------------------------------
 Aide
