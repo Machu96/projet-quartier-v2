@@ -4,7 +4,10 @@
 
 @section('content')
 
-    {{--HTML/Blade ici--}}
+    @foreach($places as $place)
+
+
+    @endforeach
 
 @endsection
 
