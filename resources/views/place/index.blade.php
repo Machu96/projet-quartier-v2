@@ -44,7 +44,6 @@
         text[positionelement].style.height='100%';
         var textinner = document.getElementsByClassName('wrap-text-inner');
         textinner[positionelement].style.width='40%';
-        textinner[positionelement].style.padding='40px';
         var map = document.getElementsByClassName('container-map');
         map[positionelement].style.display='initial';
         map[positionelement].style.visibility='initial';
