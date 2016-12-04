@@ -404,7 +404,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
     outline: none;
 }
 /*--------------------------------------------------
-	BAR RESTO
+	BAR RESTO INCONTOURNABLE
 --------------------------------------------------*/
 .element-wrap{
     background-color: white;
@@ -421,9 +421,10 @@ ul.tab li a:focus, .active {background-color: #ccc;}
     margin-top: -23px;
 
 }
-.wrap-picture-inside {
+.wrap-picture-inside{
     background-size: cover;
     height: 200px;
+    transition:0.2s ease-in;
 }
 .wrap-text{
     height: 140px;
