@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class RestaurantController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,11 @@ class OrderController extends Controller
     public function index()
     {
 
+    }
+
+    public function indexAdmin()
+    {
+        return view('dashboard.restaurant');
     }
 
     /**
@@ -80,9 +85,5 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function bill(){
-        return view('bill.index');
     }
 }

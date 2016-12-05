@@ -36,6 +36,7 @@ Route::get('catalog/filter/{query}', 'CatalogController@filter');
 
 /*Trajet*/
 Route::get('journey', 'JourneyController@index');
+Route::get('bill', 'OrderController@bill');
 
 Route::resource('products', 'ProductController');
 Route::resource('shops', 'ShopController');
@@ -55,6 +56,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('event', 'DashboardController@event');
     Route::get('shop', 'DashboardController@shop');
     Route::get('place', 'PlaceController@indexAdmin');
+
+    Route::get('restaurant', 'RestaurantController@indexAdmin');
 
     Route::get('get-shops/{query}', 'DashboardController@getShops');
 

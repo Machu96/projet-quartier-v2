@@ -4,10 +4,60 @@
 
 @section('content')
 
-    @foreach($places as $place)
+    <div class="grid-3 has-gutter">
+        @foreach($places as $place)
 
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div> <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
 
-    @endforeach
+        @endforeach
+    </div>
+
     <div class="header-mt">
         <div class="flex-container-column">
             <h1 class="page-title" id="home_title_1">Lieux Incontournables</h1>
