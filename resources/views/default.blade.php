@@ -28,7 +28,9 @@
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
+
                 <li><button id="pdf">PDF</button></li>
+
                 <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
                 <li id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">

@@ -57,6 +57,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('shop', 'DashboardController@shop');
     Route::get('place', 'PlaceController@indexAdmin');
 
+    Route::get('restaurant', 'RestaurantController@indexAdmin');
+
     Route::get('get-shops/{query}', 'DashboardController@getShops');
 
 });

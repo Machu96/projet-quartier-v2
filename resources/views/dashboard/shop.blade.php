@@ -8,6 +8,13 @@
 @endsection
 
 
+@section('css')
+
+    {!! Html::style('dashboard/plugins/select2/select2.min.css') !!}
+
+@endsection
+
+
 @section('content')
 
     <div class="row">
@@ -24,7 +31,7 @@
                             <th>Produit</th>
                             <th>Stock</th>
                             <th>Magasin</th>
-                            <th></th>
+                            <th><button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Ajouter</button></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -42,6 +49,7 @@
                                 <td>{{ $product->productName }}</td>
                                 <td>{{ $product->productStock }}</td>
                                 <td>{{ $product->shopName }}</td>
+
                                 <td>
                                     {!! Form::open(['method' => 'delete', 'url' => url('products', $product->productId)]) !!}
 
@@ -49,7 +57,6 @@
 
                                     {!! Form::close() !!}
                                 </td>
-
                             </tr>
                         @empty
 
