@@ -100,6 +100,7 @@ desired effect
                 <li><a href="{!! url('admin/event') !!}"><i class="fa  fa-calendar"></i> <span>Événements</span></a></li>
                 <li><a href="{!! url('admin/shop') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des produits</span></a></li>
                 <li><a href="{!! url('admin/place') !!}"><i class="fa fa-map"></i> <span>Gestion des lieux</span></a></li>
+                <li><a href="{!! url('admin/restaurant') !!}"><i class="fa fa-coffee"></i> <span>Gestion des  bars</span></a></li>
 
             </ul>
             <!-- /.sidebar-menu -->

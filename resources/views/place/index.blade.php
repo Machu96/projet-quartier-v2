@@ -4,10 +4,59 @@
 
 @section('content')
 
-    @foreach($places as $place)
+    <div class="grid-3 has-gutter">
+        @foreach($places as $place)
 
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div> <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-header">
+                    <div class="event-place">{{ $place->name }}</div>
+                </div>
+                <div class="event-date">
+                    {{ $place->name }}
+                </div>
+            </div>
 
-    @endforeach
+        @endforeach
+    </div>
 
 @endsection
 
