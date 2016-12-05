@@ -8,9 +8,8 @@
         <title>Laravel</title>
 
         {!! Html::style('css/knacss.css') !!}
-        {!! Html::style('css/style.css') !!}
-        {!! Html::style('css/home.css') !!}
-        {!! Html::style('css/parcours.css') !!}
+        {!! Html::style('css/main.css') !!}
+
     </head>
 
     <body>
@@ -30,6 +29,7 @@
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
                 <li><button id="pdf">PDF</button></li>
+                <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
                 <li id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -59,7 +59,11 @@
         <div>
             @yield('content')
         </div>
-
+        <div id="footer-picture">
+        <footer>
+            <span>Copyright VieuxLyon 2016 - <a href="#">Mentions légales</a> - Institut G4</span>
+        </footer>
+            </div>
 
         {!! Html::script('js/jquery.js') !!}
         @yield('script')

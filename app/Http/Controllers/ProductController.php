@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,24 +19,18 @@ class ProductController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        dd($request);
+
+    public function store(Request $request, Product $product){
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->stock = $request->stock;
+        $product->shop_id = $request->shop_id;
+        $product->save();
     }
 
     /**
@@ -80,6 +75,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('products')->where('id', '=', $id)->delete();
     }
 }
