@@ -43,6 +43,7 @@ Route::resource('shops', 'ShopController');
 Route::resource('events', 'EventController');
 Route::resource('places', 'PlaceController');
 Route::resource('orders', 'OrderController');
+Route::resource('restaurants', 'RestaurantController');
 
 Route::get('language/{lang}', function($lang){
     App::setLocale($lang);

@@ -9,7 +9,7 @@
 
 @section('content')
 
-    {!! Form::open(['url' => url('places'), 'method' => 'post']) !!}
+    {!! Form::open(['url' => url('restaurants'), 'method' => 'post', 'files' => true]) !!}
 
     <div class="input-group">
         <label for="name">Nom</label>
@@ -34,6 +34,11 @@
     <div class="input-group">
         <label for="longitude">Longitude</label>
         <input name="longitude" id="longitude" class="form-control" type="number">
+    </div>
+
+    <div class="input-group">
+        <label for="image">Longitude</label>
+        <input class="form-control" name="image" id="image" type="file">
     </div>
 
     <button class="btn-primary btn" type="submit">Ajouter</button>
