@@ -1,5 +1,12 @@
 # Projet Quartier V2
 
+## Problemes récurrents
+ - dans le .env 
+- DB_USERNAME=root 
+- DB_PASSWORD= 
+A adapter en fonction de votre configuration locale de BDD, mais c'est le cas le plus commun
+
+
 ## Tech
 
 - PHP 5.6 >=  
