@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Restaurant;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -29,12 +30,18 @@ class RestaurantController extends Controller
      */
     public function store(Request $request, Restaurant $restaurant)
     {
+        $urlImage = str_random(32) . '.' . $request->image->clientExtension();
+        $request->image->storeAs('images/restaurants', $urlImage);
+
         $restaurant->name = $request->name;
         $restaurant->description = $request->description;
         $restaurant->address = $request->address;
         $restaurant->latitude = $request->latitude;
         $restaurant->longitude = $request->longitude;
+        $restaurant->url = $urlImage;
         $restaurant->save();
+
+        return redirect()->back()->with('success', 'Le restaurant/bar a bien été ajouté !');
     }
 
     /**
