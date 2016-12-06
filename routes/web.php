@@ -47,7 +47,6 @@ Route::resource('restaurants', 'RestaurantController');
 
 Route::get('language/{lang}', function($lang){
     App::setLocale($lang);
-    dd(App::getLocale());
     return redirect()->back();
 });
 

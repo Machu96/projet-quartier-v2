@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -34,9 +35,18 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Event $event)
     {
-        //
+        $urlImage = str_random(32) . '.' . $request->image->clientExtension();
+        $request->image->storeAs('public/events', $urlImage);
+
+        $event->name = $request->name;
+        $event->description = $request->description;
+        $event->name = $request->name;
+        $event->url = $request->url;
+        $event->save();
+
+        return redirect()->back();
     }
 
     /**
