@@ -30,18 +30,25 @@ class RestaurantController extends Controller
      */
     public function store(Request $request, Restaurant $restaurant)
     {
+<<<<<<< HEAD
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
         $request->image->storeAs('images/restaurants', $urlImage);
 
+=======
+>>>>>>> 72110621022377589d79ffdd40d80b5f1cfd94de
         $restaurant->name = $request->name;
         $restaurant->description = $request->description;
         $restaurant->address = $request->address;
         $restaurant->latitude = $request->latitude;
         $restaurant->longitude = $request->longitude;
+<<<<<<< HEAD
         $restaurant->url = $urlImage;
         $restaurant->save();
 
         return redirect()->back()->with('success', 'Le restaurant/bar a bien été ajouté !');
+=======
+        $restaurant->save();
+>>>>>>> 72110621022377589d79ffdd40d80b5f1cfd94de
     }
 
     /**
