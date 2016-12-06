@@ -35,15 +35,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            {!! Form::open(['method' => 'post', 'url' => url('products')]) !!}
-                            <td><input name="name" type="text" class="form-control"></td>
-                            <td><input name="stock" type="number" class="form-control"></td>
-                            <td><input name="shop" type="text" class="form-control"></td>
-                            <td><button type="submit" class="btn btn-default">Ajouter</button></td>
-                            {!! Form::close() !!}
-                        </tr>
-
                         @forelse($products as $product)
                             <tr>
                                 <td>{{ $product->productName }}</td>
@@ -85,7 +76,6 @@
             <!-- /.box -->
         </div>
     </div>
-
 @endsection
 
 @section('modal')
