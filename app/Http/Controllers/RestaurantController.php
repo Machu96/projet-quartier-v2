@@ -29,7 +29,12 @@ class RestaurantController extends Controller
      */
     public function store(Request $request, Restaurant $restaurant)
     {
-
+        $restaurant->name = $request->name;
+        $restaurant->description = $request->description;
+        $restaurant->address = $request->address;
+        $restaurant->latitude = $request->latitude;
+        $restaurant->longitude = $request->longitude;
+        $restaurant->save();
     }
 
     /**
