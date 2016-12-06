@@ -82,6 +82,7 @@
     <div class="closebutton" style="text-align: center; display: none;"><a onclick="closepanel(0)">close</a></div>
 
 </div>
+
 @endsection
 
 
