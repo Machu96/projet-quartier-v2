@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('stock');
-            $table->integer('shop_id');
+            $table->unsignedInteger('shop_id');
             $table->timestamps();
         });
 
