@@ -8,6 +8,13 @@
 @endsection
 
 
+@section('css')
+
+    {!! Html::style('dashboard/plugins/select2/select2.min.css') !!}
+
+@endsection
+
+
 @section('content')
 
     <div class="row">
@@ -33,6 +40,7 @@
                                 <td>{{ $product->productName }}</td>
                                 <td>{{ $product->productStock }}</td>
                                 <td>{{ $product->shopName }}</td>
+
                                 <td>
                                     {!! Form::open(['method' => 'delete', 'url' => url('products', $product->productId)]) !!}
 

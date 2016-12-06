@@ -36,6 +36,7 @@ Route::get('catalog/filter/{query}', 'CatalogController@filter');
 
 /*Trajet*/
 Route::get('journey', 'JourneyController@index');
+Route::get('bill', 'OrderController@bill');
 
 Route::resource('products', 'ProductController');
 Route::resource('shops', 'ShopController');
