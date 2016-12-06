@@ -101,6 +101,8 @@ desired effect
                 <li><a href="{!! url('admin/shop') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des produits</span></a></li>
                 <li><a href="{!! url('admin/place') !!}"><i class="fa fa-map"></i> <span>Gestion des lieux</span></a></li>
 
+                <li><a href="{!! url('admin/restaurant') !!}"><i class="fa fa-coffee"></i> <span>Gestion des  bars</span></a></li>
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>
@@ -137,6 +139,7 @@ desired effect
 <!-- ./wrapper -->
 
 
+
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -144,7 +147,6 @@ desired effect
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
 
 <!-- REQUIRED JS SCRIPTS -->
 
