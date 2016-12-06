@@ -22,24 +22,19 @@ class RestaurantController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Restaurant $restaurant)
     {
-        //
+        $restaurant->name = $request->name;
+        $restaurant->description = $request->description;
+        $restaurant->address = $request->address;
+        $restaurant->latitude = $request->latitude;
+        $restaurant->longitude = $request->longitude;
+        $restaurant->save();
     }
 
     /**

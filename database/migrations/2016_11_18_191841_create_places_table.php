@@ -18,6 +18,9 @@ class CreatePlacesTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->date('creation_date');
+            $table->text('url');
+            $table->float('latitude');
+            $table->float('longitude');
             $table->timestamps();
         });
     }
