@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div id="event_container">
+        <div id="event_container" onmouseover=" setTimeout(countdown)">
             <?php foreach (['oui'] as $oui){/* ?>
             <div class="event">
                 <div class="event-header">
@@ -114,7 +114,7 @@
                }
            }
        }
-       setTimeout(countdown);
+
 
    </script>
 
