@@ -143,6 +143,7 @@ iframe{
     border: none;
     padding: 0;
     outline: none;
+    padding-right:10px;
 }
 /*--------------------------------------------------
 	HOME PAGE
@@ -400,7 +401,6 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 .add-cart-button{
     background-color: white;
     border-radius: 10px;
-    border: solid 2px #3E67B7;
     outline: none;
 }
 /*--------------------------------------------------
@@ -518,6 +518,7 @@ footer span {
 #footer-picture{
     height:100px;
     background: url("../img/background-vieux-lyon.jpg") no-repeat bottom center;
+    width:100%;
 }
 /*--------------------------------------------------
 KEY FRAME

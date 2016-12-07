@@ -33,7 +33,7 @@
                 <li><button id="pdf">PDF</button></li>
 
                 <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
-                <li id="flags-form">
+                <li class="flex-container" id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                         <button type="submit" name="lang" value="fr">

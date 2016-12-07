@@ -57,7 +57,6 @@
 
         @endforeach
     </div>
-
     <div class="header-mt">
         <div class="flex-container-column">
             <h1 class="page-title" id="home_title_1">Lieux Incontournables</h1>
