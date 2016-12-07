@@ -79,8 +79,6 @@
                 <div class="home-datavision-description">des habitants se disent heureux dans ce quartier :)</div>
             </div>
         </div>
-
-
     </div>
 
 

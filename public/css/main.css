@@ -254,6 +254,7 @@ iframe{
     display: flex;
     flex-direction: column;
     height: 70px;
+    width:55px;
     background-color: #3d3c38;
     text-align: center;
     color: #FFFFFF;
@@ -291,9 +292,12 @@ iframe{
  ******************************************************************************/
 
 #datavision_container{
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 0px 10px;
+    background: url('../img/fond-datavision.png') no-repeat;
+    background-size:cover;
     width: 100%;
+    height:560px;
+    margin-top:-120px;
+    margin-bottom:-110px;
     padding: 10px 70px 10px 70px;
 }
 
@@ -519,7 +523,9 @@ footer span {
 #footer-picture{
     height:100px;
     background: url("../img/background-vieux-lyon.jpg") no-repeat bottom center;
+    background-size: cover;
     width:100%;
+
 }
 /*--------------------------------------------------
 KEY FRAME
