@@ -30,33 +30,40 @@
             </div>
         </div>
 
-        <div id="event_container" onmouseover=" setTimeout(countdown)">
-            <?php foreach (['oui'] as $oui){/* ?>
+        <div class ="flex-container" id="event_container" onmouseover=" setTimeout(countdown)">
+            @foreach ($events as $event  )
+
             <div class="event">
                 <div class="event-header">
-                    <div class="event-title"><?= $event['name'] ?></div>
-                    <div class="event-place">@ <?=$event['place'] ?></div>
-                    <div class="event-hour">
-                        <?php
-                        $date = date_create($event['date']);
-                        echo $date->format('M d')
-                        ?>
-                        @ <?= $date->format('H\hi') ?>
+                    <div>
+                        <div class="event-title">{{$event->name}}</div>
+                        <div class="event-place">?????</div>
+                        <div class="event-hour">
+                            <?php
+                            $date = date_create($event->date);
+                            echo $date->format('M d')
+                            ?>
+                            @ <?= $date->format('H\hi') ?>
+                        </div>
+                    </div>
+                    <div class="event-date">
+                        <div class="month">
+                            <?= $date->format('M') ?>
+                        </div>
+                        <div class="day">
+                            <?= $date->format('d') ?>
+                        </div>
+                        <div class="dayWeek">
+                            <?= $date->format('D') ?>
+                        </div>
                     </div>
                 </div>
-                <div class="event-date">
-                    <div class="month">
-                        <?= $date->format('M') ?>
-                    </div>
-                    <div class="day">
-                        <?= $date->format('d') ?>
-                    </div>
-                    <div class="dayWeek">
-                        <?= $date->format('D') ?>
-                    </div>
+                <div class="event-description">
+                    <p>{{$event->description}}</p>
                 </div>
+
             </div>
-            <?php */} ?>
+           @endforeach
         </div>
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
