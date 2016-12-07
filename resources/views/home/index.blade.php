@@ -58,6 +58,12 @@
             </div>
             <?php */} ?>
         </div>
+        
+        @foreach($events as $e)
+
+
+        @endforeach
+        
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
                 <div class="home-datavision-number">352</div>
@@ -75,7 +81,6 @@
 
 
     </div>
-
 
 @endsection
 
