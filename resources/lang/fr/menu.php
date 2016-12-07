@@ -8,6 +8,11 @@
 
 return [
 
-    'home' => 'Accueil'
+    'home' => 'ACCUEIL',
+    'lieux' => 'LIEUX CULTURELS',
+    'produit' => 'PRODUITS',
+    'parcours' => 'PARCOURS',
+    'panier' => 'MON PANIER',
+    'connexion' => 'CONNEXION',
 
 ];
