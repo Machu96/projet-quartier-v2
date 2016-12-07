@@ -4,60 +4,6 @@
 
 @section('content')
 
-    {{--<div class="grid-3 has-gutter">
-        @foreach($places as $place)
-
-            <div class="event">
-                <div class="event-header">
-                    <div class="event-place">{{ $place->name }}</div>
-                </div>
-                <div class="event-date">
-                    {{ $place->name }}
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-header">
-                    <div class="event-place">{{ $place->name }}</div>
-                </div>
-                <div class="event-date">
-                    {{ $place->name }}
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-header">
-                    <div class="event-place">{{ $place->name }}</div>
-                </div>
-                <div class="event-date">
-                    {{ $place->name }}
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-header">
-                    <div class="event-place">{{ $place->name }}</div>
-                </div>
-                <div class="event-date">
-                    {{ $place->name }}
-                </div>
-            </div> <div class="event">
-                <div class="event-header">
-                    <div class="event-place">{{ $place->name }}</div>
-                </div>
-                <div class="event-date">
-                    {{ $place->name }}
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-header">
-                    <div class="event-place">{{ $place->name }}</div>
-                </div>
-                <div class="event-date">
-                    {{ $place->name }}
-                </div>
-            </div>
-
-        @endforeach
-    </div>--}}
-
 
     <div class="header-mt">
         <div class="flex-container-column">
@@ -73,7 +19,7 @@
                     <h2>{{ $place->name }}</h2>
                 </div>
                 <div class="wrap-picture">
-                    <div class="wrap-picture-inside" style="background-image: url('https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/KXEQJWRTWW.jpg')"></div>
+                    <div class="wrap-picture-inside" style="background-image: url('../storage/app/public/places/{{ $place->url }}')"></div>
                 </div>
                 <div class="wrap-text flex-container">
                     <div class="wrap-text-inner">

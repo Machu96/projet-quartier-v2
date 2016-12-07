@@ -19,32 +19,24 @@
         <div id="parcours1" class="tabcontent flex-container">
             <div class="container-text journey-text">
                 <p>
-                    Cette visite en boucle dure environ 2h. Elle vous permet d'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d'être exhaustive, elle permet de se familiariser avec les lieux.
+                    Cette visite en boucle dure environ 1h. Elle vous permet de faire connaissance avec le quartier du vieux lyon.
                 </p>
-                <h2>Départ (Durée : 2h00 ) </h2>
+                <h2>Départ (Durée : 1h00 ) </h2>
                 <ul>
                     <li>1 -  Cathédrale Saint Jean</li>
-                    <li>2 -  3/5 rue des Antonins</li>
-                    <li>3 -  Traboule sur des Antonins à rue Saint-Jean</li>
-                    <li>4 -  Cour Chamarier</li>
-                    <li>5 -  Lion house lawyers</li>
+                    <li>2 -  Maison des avocats</li>
                     <li>6 -  Grande Traboule du 54 rue Saint-Jean</li>
-                    <li>7 -  Cour tour rose au 16 rue du Boeuf</li>
-                    <li>8 -  Ancien palais de Justice "Les 24 colonnes"</li>
-                    <li>9 -  Traboule 27 rue St Jean au 6 rue des Trois Maries</li>
+                    <li>7 -  Rue Saint-Jean</li>
+                    <li>8 -  Place de la Baleine</li>
+                    <li>9 -  Place Neuve Saint-Jean</li>
                     <li>10 - Place de la Baleine</li>
-                    <li>11 - Traboule 2 place du Gouvernement au 10 quai Romain Rolland</li>
-                    <li>12 - Maison Thomassin</li>
-                    <li>13 - Palais du Change</li>
-                    <li>14 - Escalier renaissance Henri IV</li>
-                    <li>15 - Galerie Philibert Delrme, 8 rue Juiverie</li>
-                    <li>16 - Église Saint-Paul de Lyon</li>
+                    <li>11 - Montée des Chazeaux</li>
                 </ul>
 
 
             </div>
             <div class="container-map">
-                <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1aEs4XvqmVPwEi318FYrwOgYFia0" width="100%" height="100%"></iframe></div>
+                <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1Mrtp59CGIddEb2xh6AYO1yZe-Ao" width="100%" height="100%"></iframe></div>
                 <div class="copy-link-map">
                     <form id="link-map">
                         <input disabled="disabled"  title="LienMap" type="text" name="mapurl"  value="https://goo.gl/maps/bNbUYZYJKTD2">
@@ -81,7 +73,8 @@
 
             </div>
             <div class="container-map">
-                <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1aEs4XvqmVPwEi318FYrwOgYFia0" width="100%" height="100%"></iframe></div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1aEs4XvqmVPwEi318FYrwOgYFia0" width="100%" height="100%"></iframe></div>
                 <div class="copy-link-map">
                     <form id="link-map">
                         <input disabled="disabled"  title="LienMap" type="text" name="mapurl"  value="https://goo.gl/maps/bNbUYZYJKTD2">
