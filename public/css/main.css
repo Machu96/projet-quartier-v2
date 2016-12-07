@@ -143,6 +143,7 @@ iframe{
     border: none;
     padding: 0;
     outline: none;
+    padding-right:10px;
 }
 /*--------------------------------------------------
 	HOME PAGE
@@ -518,6 +519,7 @@ footer span {
 #footer-picture{
     height:100px;
     background: url("../img/background-vieux-lyon.jpg") no-repeat bottom center;
+    width:100%;
 }
 /*--------------------------------------------------
 KEY FRAME
