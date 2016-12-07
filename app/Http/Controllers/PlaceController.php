@@ -45,11 +45,10 @@ class PlaceController extends Controller
     public function store(Request $request, Place $place, Filesystem $filesystem)
     {
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
-        $request->image->storeAs('images/places', $urlImage);
+        $request->image->storeAs('public/places', $urlImage);
 
         $place->name = $request->name;
         $place->description = $request->description;
-        $place->creation_date = $request->creation_date;
         $place->url = $urlImage;
         $place->latitude = $request->latitude;
         $place->longitude = $request->longitude;
