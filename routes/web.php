@@ -52,6 +52,11 @@ Route::get('language/{lang}', function($lang){
     return redirect()->back();
 });
 
+Route::get('pdf', 'PdfController@generate');
+
+
+/*Admin*/
+
 Route::group(['prefix' => 'admin'], function(){
 
     Route::get('analytics', 'DashboardController@analytics');
