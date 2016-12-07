@@ -25,6 +25,11 @@
         <input class="form-control" name="date" id="date" type="date">
     </div>
 
+    <div class="input-group">
+        <label for="hour">Heure</label>
+        <input class="form-control" name="hour" id="hour" type="time">
+    </div>
+
     <button class="btn-primary btn" type="submit">Ajouter</button>
 
 

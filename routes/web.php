@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('home.index');
+    return view('home.index', [
+        'events' => DB::table('events')->get()
+    ]);
 })->name('home');
 
 /*Panier*/

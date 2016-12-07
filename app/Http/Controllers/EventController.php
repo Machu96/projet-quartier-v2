@@ -42,8 +42,9 @@ class EventController extends Controller
 
         $event->name = $request->name;
         $event->description = $request->description;
-        $event->name = $request->name;
-        $event->url = $request->url;
+        $event->date = $request->date;
+        $event->hour = $request->hour;
+        $event->url = $urlImage;
         $event->save();
 
         return redirect()->back();
