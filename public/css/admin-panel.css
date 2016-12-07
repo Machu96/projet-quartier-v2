@@ -1,0 +1,14 @@
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: flex-end;
+}
+.item_gallery{
+    width:400px;
+    text-align: center;
+}
+.item_gallery img{
+    width:70%;
+}
