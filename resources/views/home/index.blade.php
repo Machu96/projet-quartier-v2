@@ -60,15 +60,15 @@
         </div>
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
-                <div class="home-datavision-number">352</div>
+                <div class="home-datavision-number" id="compteur1">352</div>
                 <div class="home-datavision-description">monuments culturels</div>
             </div>
             <div class="home-datavision">
-                <div class="home-datavision-number">15</div>
+                <div class="home-datavision-number" id="compteur2">15</div>
                 <div class="home-datavision-description">traboules</div>
             </div>
             <div class="home-datavision">
-                <div class="home-datavision-number">100%</div>
+                <div class="home-datavision-number" id="compteur3">100%</div>
                 <div class="home-datavision-description">des habitants se disent heureux dans ce quartier :)</div>
             </div>
         </div>
@@ -83,6 +83,22 @@
 
 @section('script')
 
-    {{-- Mettre le jQuery ici --}}
+   <script>
+
+       // Premier compteur
+       var n = 35; // Nombre final du compteur
+       var cpt = 0; // Initialisation du compteur
+       var duree = 5; // Durée en seconde pendant laquel le compteur ira de 0 à 35
+       var delta = Math.ceil((duree * 100) / n); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
+       var node =  document.getElementById("compteur1"); // On récupère notre noeud où sera rafraîchi la valeur du compteur
+
+       function countdown1() {
+           node.innerHTML = ++cpt;
+           if( cpt < n ) { // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+               setTimeout(countdown1, delta);
+           }
+       }
+       setTimeout(countdown1, delta);
+   </script>
 
 @endsection

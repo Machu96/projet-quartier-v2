@@ -73,7 +73,7 @@
         <h2>{{ $place->name }}</h2>
     </div>
     <div class="wrap-picture">
-        <div class="wrap-picture-inside" style="background-image: url('https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/KXEQJWRTWW.jpg')"></div>
+        <div class="wrap-picture-inside" style="background-image: url('../storage/app/public/places/{{ $place->url }}')"></div>
     </div>
     <div class="wrap-text flex-container">
         <div class="wrap-text-inner">
