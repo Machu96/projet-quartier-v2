@@ -460,7 +460,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 .wrap-text-inner{
     height:100%;
 }
-.map-wrap, .placesmap{
+.map-wrap, #placesmap{
     display: none;
 }
 

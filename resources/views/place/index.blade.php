@@ -21,7 +21,7 @@
 
         <?php $i = 0 ?>
         @foreach($places as $place)
-            <div class="element-wrap mtm placesmap"></div>
+            <div class="element-wrap mtm" id="placesmap" style="height: 500px;"></div>
             <div class="element-wrap mtm places">
                 <div class="wrap-title">
                     <h2>{{ $place->name }}</h2>
@@ -51,6 +51,7 @@
 
 
 @section('script')
+
     <script>
         function openpanel(positionelement){
             var image = document.getElementsByClassName('wrap-picture-inside');
@@ -90,8 +91,7 @@
             for (i = 0; i < places.length; i++) {
                 places[i].style.display = "none";
             }
-            var placesmap = document.getElementsByClassName('placesmap');
-            placesmap[0].style.display = 'block';
+            document.getElementById('placesmap').style.display="block";
         }
         function hiddeplacesmap () {
             document.getElementById('mapon').style.display="none";
@@ -101,8 +101,7 @@
             for (i = 0; i < places.length; i++) {
                 places[i].style.display = "block";
             }
-            var placesmap = document.getElementsByClassName('placesmap');
-            placesmap[0].style.display = 'none';
+            document.getElementById('placesmap').style.display="none";
         }
 
     </script>
