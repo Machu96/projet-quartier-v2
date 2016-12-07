@@ -12,9 +12,17 @@
     </div>
 
     <div class="header-mt">
+        <div class="switch">
+            <div class="switch-inner">
+                <span>Afficher carte </span>
+                <a id="mapoff" onclick="displayplacesmap()"><i class="fa fa-2x fa-toggle-off" aria-hidden="true"></i></a>
+                <a id="mapon" onclick="hiddeplacesmap()"  style="display: none;" ><i class="fa fa-2x fa-toggle-on" aria-hidden="true"></i></a></div>
+        </div>
+
         <?php $i = 0 ?>
         @foreach($places as $place)
-            <div class=" element-wrap mtm">
+            <div class="element-wrap mtm placesmap"></div>
+            <div class="element-wrap mtm places">
                 <div class="wrap-title">
                     <h2>{{ $place->name }}</h2>
                 </div>
@@ -35,6 +43,7 @@
             </div>
             <?php $i++ ?>
         @endforeach
+
     </div>
 
 @endsection
@@ -72,6 +81,28 @@
             buttonopen[positionelement].style.display='block';
             var buttonclose = document.getElementsByClassName('closebutton');
             buttonclose[positionelement].style.display='none';
+        }
+        function displayplacesmap () {
+            document.getElementById('mapon').style.display="initial";
+            document.getElementById('mapoff').style.display="none";
+           var places = document.getElementsByClassName('places');
+            var i;
+            for (i = 0; i < places.length; i++) {
+                places[i].style.display = "none";
+            }
+            var placesmap = document.getElementsByClassName('placesmap');
+            placesmap[0].style.display = 'block';
+        }
+        function hiddeplacesmap () {
+            document.getElementById('mapon').style.display="none";
+            document.getElementById('mapoff').style.display="initial";
+            var places = document.getElementsByClassName('places');
+            var i;
+            for (i = 0; i < places.length; i++) {
+                places[i].style.display = "block";
+            }
+            var placesmap = document.getElementsByClassName('placesmap');
+            placesmap[0].style.display = 'none';
         }
 
     </script>
