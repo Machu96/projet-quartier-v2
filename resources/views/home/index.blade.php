@@ -61,6 +61,7 @@
         
         @foreach($events as $e)
 
+            <img src="{{  Storage::get('public/events/' . $e->url)  }}" alt="">
 
         @endforeach
         
