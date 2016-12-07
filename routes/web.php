@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('home.index');
+    return view('home.index', [
+        'events' => DB::table('events')->get()
+    ]);
 })->name('home');
 
 /*Panier*/
@@ -47,7 +49,6 @@ Route::resource('restaurants', 'RestaurantController');
 
 Route::get('language/{lang}', function($lang){
     App::setLocale($lang);
-    dd(App::getLocale());
     return redirect()->back();
 });
 

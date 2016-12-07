@@ -31,7 +31,7 @@ class RestaurantController extends Controller
     public function store(Request $request, Restaurant $restaurant)
     {
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
-        $request->image->storeAs('images/restaurants', $urlImage);
+        $request->image->storeAs('public/restaurants', $urlImage);
 
         $restaurant->name = $request->name;
         $restaurant->description = $request->description;
