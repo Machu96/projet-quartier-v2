@@ -17,7 +17,7 @@
             <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'votreparcours')">Votre parcours</a></li>
         </ul>
         <div id="parcours1" class="tabcontent flex-container">
-            <div class="container-text">
+            <div class="container-text journey-text">
                 <p>
                     Cette visite en boucle dure environ 2h. Elle vous permet d'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d'être exhaustive, elle permet de se familiariser avec les lieux.
                 </p>
@@ -54,7 +54,7 @@
             </div>
         </div>
         <div id="parcours2" class="tabcontent flex-container">
-            <div class="container-text">
+            <div class="container-text journey-text">
                 <p>
                     Cette visite en boucle dure environ 2h. Elle vous permet d'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d'être exhaustive, elle permet de se familiariser avec les lieux.
                 </p>
@@ -91,7 +91,7 @@
             </div>
         </div>
         <div id="parcours3" class="tabcontent flex-container">
-            <div class="container-text">
+            <div class="container-text journey-text">
                 <p>
                     Cette visite en boucle dure environ 2h. Elle vous permet d'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d'être exhaustive, elle permet de se familiariser avec les lieux.
                 </p>

@@ -63,7 +63,8 @@
             <h1 class="page-title" id="home_title_1">Lieux Incontournables</h1>
         </div>
     </div>
-<div class="element-wrap header-mt">
+<div class="header-mt">
+    <div class=" element-wrap mtm">
     <div class="wrap-title">
         <h2>Cathédrale St-jean</h2>
     </div>
@@ -78,9 +79,9 @@
             <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11133.988129538877!2d4.8169921898783965!3d45.76122843568518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ebaaef7e7f5f%3A0x2d9cc97768f72426!2sVieux+Lyon%2C+69005+Lyon%2C+France!5e0!3m2!1sfr!2sfr!4v1478164165338" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
         </div>
     </div>
-    <div class="openbutton" style="text-align: center;"><a onclick="openpanel(0)">+ info</a></div>
-    <div class="closebutton" style="text-align: center; display: none;"><a onclick="closepanel(0)">close</a></div>
-
+    <div class="openbutton pbm ptm" style="text-align: center;"><a onclick="openpanel(0)"><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a></div>
+    <div class="closebutton pbm" style="text-align: center; display: none;"><a onclick="closepanel(0)"><i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i></a></div>
+    </div>
 </div>
 
 @endsection
