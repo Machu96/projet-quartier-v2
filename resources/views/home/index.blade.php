@@ -11,7 +11,7 @@
         <div class="flex-container-column" id="home_page">
             <h1 class="page-title" id="home_title_1">Venez découvrir</h1>
             <h1 class="page-title" id="home_title_2">le plus vieux quartier de Lyon</h1>
-            <h2 id="button_parcours">Organisez votre propre visite du quartier <img src="img\map-icon-white.svg" id="map_icon"/></h2>
+            <h2 id="button_parcours">Organisez votre propre visite du quartier <a href="{{ action('JourneyController@index') }}"><img  src="img\map-icon-white.svg" id="map_icon"/></a></h2>
         </div>
 
         <div id="home_history">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class ="flex-container" id="event_container" onmouseover=" setTimeout(countdown)">
+        <div class ="flex-container" id="event_container" onmouseover="setTimeout(countdown)">
             @foreach ($events as $event  )
 
             <div class="event">
@@ -68,15 +68,15 @@
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
                 <div class="home-datavision-number" id="compteur1">0</div>
-                <div class="home-datavision-description">monuments culturels</div>
+                <div class="home-datavision-description">Monuments culturels</div>
             </div>
             <div class="home-datavision">
                 <div class="home-datavision-number" id="compteur2">0</div>
-                <div class="home-datavision-description">traboules</div>
+                <div class="home-datavision-description">Traboules</div>
             </div>
             <div class="home-datavision">
                 <div class="home-datavision-number"><span id="compteur3">0</span><span>%</span></div>
-                <div class="home-datavision-description">des habitants se disent heureux dans ce quartier :)</div>
+                <div class="home-datavision-description">Des habitants se disent heureux dans ce quartier</div>
             </div>
         </div>
     </div>
