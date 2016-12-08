@@ -11,22 +11,32 @@
 
     {!! Form::open(['url' => url('places'), 'method' => 'post', 'files' => true]) !!}
 
-        <div class="from-group">
-            <label for="name">Nom</label>
-            <input name="name" id="name" class="form-control" type="text">
-        </div>
+    <div class="form-group">
+        <label for="nameFr">Nom</label>
+        <input name="nameFr" id="nameFr" class="form-control" type="text">
+    </div>
 
-        <div class="form-group">
-            <label for="creation_date">Date de création</label>
-            <input type="date" name="creation_date" id="creation_date" class="form-control">
-        </div>
+    <div class="form-group">
+        <label for="descriptionFr">Description</label>
+        <textarea class="form-control" name="descriptionFr" id="descriptionFr" cols="30" rows="10"></textarea>
+    </div>
 
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
-        </div>
+    <div class="form-group">
+        <label for="nameEn">Nom anglais</label>
+        <input name="nameEn" id="nameEn" class="form-control" type="text">
+    </div>
 
-        <div class="form-group">
+    <div class="form-group">
+        <label for="descriptionEn">Description anglaise</label>
+        <textarea class="form-control" name="descriptionEn" id="descriptionEn" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="creation_date">Date de création</label>
+        <input type="date" name="creation_date" id="creation_date" class="form-control">
+    </div>
+
+    <div class="form-group">
             <label for="image">Image</label>
             <input class="form-control" name="image" id="image" type="file">
         </div>

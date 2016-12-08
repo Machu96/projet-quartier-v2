@@ -47,8 +47,10 @@ class PlaceController extends Controller
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
         $request->image->storeAs('public/places', $urlImage);
 
-        $place->name = $request->name;
-        $place->description = $request->description;
+        $place->nameFr = $request->nameFr;
+        $place->nameEn = $request->nameEn;
+        $place->descriptionFr = $request->descriptionFr;
+        $place->descriptionEn = $request->descriptionEn;
         $place->url = $urlImage;
         $place->latitude = $request->latitude;
         $place->longitude = $request->longitude;
