@@ -7,7 +7,7 @@
 
     <div class="header-mt">
         <div class="flex-container-column">
-            <h1 class="page-title" id="home_title_1">Lieux Incontournables</h1>
+            <h1 class="page-title" id="home_title_1">{{ trans('Lieux_culturels.titre1') }}</h1>
         </div>
     </div>
 
