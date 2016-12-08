@@ -15,10 +15,10 @@ class CreateRestaurantsTable extends Migration
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name-fr');
-            $table->string('name-en');
-            $table->text('description-fr');
-            $table->text('description-en');
+            $table->string('nameFr');
+            $table->string('nameEn');
+            $table->text('descriptionFr');
+            $table->text('descriptionEn');
             $table->string('address');
             $table->float('latitude');
             $table->float('longitude');

@@ -12,23 +12,23 @@
     {!! Form::open(['url' => url('places'), 'method' => 'post', 'files' => true]) !!}
 
     <div class="form-group">
-        <label for="name-fr">Nom</label>
-        <input name="name-fr" id="name-fr" class="form-control" type="text">
+        <label for="nameFr">Nom</label>
+        <input name="nameFr" id="nameFr" class="form-control" type="text">
     </div>
 
     <div class="form-group">
-        <label for="description-fr">Description</label>
-        <textarea class="form-control" name="description-fr" id="description-fr" cols="30" rows="10"></textarea>
+        <label for="descriptionFr">Description</label>
+        <textarea class="form-control" name="descriptionFr" id="descriptionFr" cols="30" rows="10"></textarea>
     </div>
 
     <div class="form-group">
-        <label for="name-en">Nom anglais</label>
-        <input name="name-en" id="name-en" class="form-control" type="text">
+        <label for="nameEn">Nom anglais</label>
+        <input name="nameEn" id="nameEn" class="form-control" type="text">
     </div>
 
     <div class="form-group">
-        <label for="description-en">Description anglaise</label>
-        <textarea class="form-control" name="description-en" id="description-en" cols="30" rows="10"></textarea>
+        <label for="descriptionEn">Description anglaise</label>
+        <textarea class="form-control" name="descriptionEn" id="descriptionEn" cols="30" rows="10"></textarea>
     </div>
 
     <div class="form-group">

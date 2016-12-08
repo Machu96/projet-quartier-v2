@@ -40,8 +40,10 @@ class EventController extends Controller
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
         $request->image->storeAs('public/events', $urlImage);
 
-        $event->name = $request->name;
-        $event->description = $request->description;
+        $event->nameFr = $request->nameFr;
+        $event->nameEn = $request->nameEn;
+        $event->descriptionFr = $request->descriptionFr;
+        $event->descriptionEn = $request->descriptionEn;
         $event->date = $request->date;
         $event->hour = $request->hour;
         $event->url = $urlImage;

@@ -26,8 +26,10 @@ class ProductController extends Controller
      */
 
     public function store(Request $request, Product $product){
-        $product->name = $request->name;
-        $product->description = $request->description;
+        $product->nameFr = $request->nameFr;
+        $product->nameEn = $request->nameEn;
+        $product->descriptionFr = $request->descriptionFr;
+        $product->descriptionEn = $request->descriptionEn;
         $product->stock = $request->stock;
         $product->shop_id = $request->shop_id;
         $product->save();
