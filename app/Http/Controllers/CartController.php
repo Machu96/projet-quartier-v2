@@ -71,7 +71,8 @@ class CartController extends Controller
 
     public function keyExist($id){
         for ($i = 0; $i < sizeof(session('item')); $i++){
-            if ($id == session('item')[$i]['id"']){
+
+            if ($id == session('item')[$i]['id']){
                 return $i;
             }
         }

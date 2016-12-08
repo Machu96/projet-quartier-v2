@@ -1,6 +1,6 @@
 @extends('default')
 
-
+<div class="header header-page"></div>
 @section('content')
 
     <div class="header-mt">
@@ -68,3 +68,4 @@
     </script>
 
 @endsection
+

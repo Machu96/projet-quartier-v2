@@ -1,7 +1,7 @@
 @extends('default')
 
 @section('content')
-
+    <div class="header header-home"></div>
     <div class="flex-container">
 
         <div class="flex-container-column" id="home_page">
