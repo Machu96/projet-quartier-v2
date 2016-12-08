@@ -26,7 +26,11 @@ class PlaceController extends Controller
     }
 
     public function indexAdmin(){
-        $places = DB::table('places')->get();
+        $places = DB::table('places')->select(
+            'name' . session('locale') . ' as name',
+            'description' . session('locale') . ' as description',
+            'url'
+        )->get();
         return view('dashboard.place', compact('places'));
     }
 
