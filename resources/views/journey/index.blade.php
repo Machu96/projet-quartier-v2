@@ -88,7 +88,7 @@
                 <p>
                     {{ trans('parcours.desc_P1') }}
                 </p>
-                <h2>{{ trans('parcours.titre_P3') }})</h2>
+                <h2>{{ trans('parcours.titre_P3') }}</h2>
                 <ul>
                     <li>1. Cathédrale Saint Jean</li>
                     <li>2. Palais de Justice</li>
