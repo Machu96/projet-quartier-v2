@@ -58,7 +58,7 @@
             <h1>{{ $place->name }}</h1>
             <img src="/storage/app/public/places/{{$place->url }}">
             <p>{{ $place->description }}</p>
-
+            <button type="button" class="btn btn-warning">Supprimer</button>
         </div>
 
     @endforeach

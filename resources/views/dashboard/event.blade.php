@@ -15,6 +15,7 @@
         <textarea class="form-control" name="descriptionFr" id="descriptionFr" cols="30" rows="10"></textarea>
     </div>
 
+
     <div class="form-group">
         <label for="nameEn">Nom anglais</label>
         <input name="nameEn" id="nameEn" class="form-control" type="text">
@@ -39,10 +40,26 @@
         <label for="hour">Heure</label>
         <input class="form-control" name="hour" id="hour" type="time">
     </div>
+    <div class="form-group">
+        <label for="place">Lieux</label>
+        <input name="place" id="place" class="form-control" type="text">
+    </div>
 
     <button class="btn-primary btn" type="submit">Ajouter</button>
 
 
     {!! Form::close() !!}
+    <div class="flex-container">
+        @foreach($events as $event)
+
+            <div class="item_gallery">
+                <h1>{{ $event->name }}</h1>
+                <img src="/storage/app/public/events/{{$event->url }}">
+                <p>{{ $event->description }}</p>
+                <button type="button" class="btn btn-warning">Supprimer</button>
+            </div>
+
+        @endforeach
+    </div>
 
 @endsection
