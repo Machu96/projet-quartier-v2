@@ -54,7 +54,7 @@
 
     <script>
         $(document).ready(function(){
-
+/*
             $('#smaug').on('click', function (e) {
                 var data = {!! $data !!}
                 e.preventDefault();
@@ -62,7 +62,7 @@
                     "_token": $(e.target).parent()[0][0].value,
                     "data": data
                 })
-            });
+            });*/
 
         });
     </script>
