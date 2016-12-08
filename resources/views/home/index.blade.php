@@ -5,9 +5,9 @@
     <div class="flex-container">
 
         <div class="flex-container-column" id="home_page">
-            <h1 class="page-title" id="home_title_1">Venez découvrir</h1>
-            <h1 class="page-title" id="home_title_2">le plus vieux quartier de Lyon</h1>
-            <h2 id="button_parcours">Organisez votre propre visite du quartier <a href="{{ action('JourneyController@index') }}"><img  src="img\map-icon-white.svg" id="map_icon"/></a></h2>
+            <h1 class="page-title" id="home_title_1">{{ trans('homepage.titre1') }}</h1>
+            <h1 class="page-title" id="home_title_2">{{ trans('homepage.titre2') }}</h1>
+            <h2 id="button_parcours">{{ trans('homepage.titre3') }} <a href="{{ action('JourneyController@index') }}"><img  src="img\map-icon-white.svg" id="map_icon"/></a></h2>
         </div>
 
         <div id="home_history">
@@ -15,9 +15,9 @@
             <div id="home_history_square"></div>
             <div class="flex-container">
                 <div class="container-text">
-                    <h2>Un peu d'histoire...</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2>{{ trans('homepage.histoire') }}</h2>
+                    <p{{ trans('homepage.histoire-text') }}</p>
+                    <p>{{ trans('homepage.histoire-text2') }}</p>
                 </div>
                 <div class="container-map">
                     <div class="overlay" onClick="style.pointerEvents='none'"></div>
@@ -71,15 +71,15 @@
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
                 <div class="home-datavision-number" id="compteur1">0</div>
-                <div class="home-datavision-description">Monuments culturels</div>
+                <div class="home-datavision-description">{{ trans('homepage.datavision1') }}</div>
             </div>
             <div class="home-datavision">
                 <div class="home-datavision-number" id="compteur2">0</div>
-                <div class="home-datavision-description">Traboules</div>
+                <div class="home-datavision-description">{{ trans('homepage.datavision2') }}</div>
             </div>
             <div class="home-datavision">
                 <div class="home-datavision-number"><span id="compteur3">0</span><span>%</span></div>
-                <div class="home-datavision-description">Des habitants se disent heureux dans ce quartier</div>
+                <div class="home-datavision-description">{{ trans('homepage.datavision3') }}</div>
             </div>
         </div>
     </div>

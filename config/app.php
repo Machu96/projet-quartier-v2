@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
 
-        Anouar\Paypalpayment\PaypalpaymentServiceProvider::class,
+
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
 
@@ -228,7 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Paypalpayment'   => Anouar\Paypalpayment\Facades\PaypalPayment::class,
+
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,

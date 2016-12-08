@@ -13,14 +13,14 @@
     {{-- Mettre le contenu ici --}}
     <div class="header-mt">
         <div class="flex-container-column">
-            <h1 class="page-title" id="home_title_1">Nos produits</h1>
+            <h1 class="page-title" id="home_title_1">{{ trans('produit.titre1') }}</h1>
         </div>
     </div>
     <div style="background-color: white;" class="header-mt">
         <div class="ptm mlm">
             <form method="get" action="{!! url('CatalogController@filter') !!}">
 
-                <label for="name">Nom de l'article</label>
+                <label for="name">{{ trans('produit.text_label') }}</label>
                 <input name="name" id="name" type="text">
 
             </form>
