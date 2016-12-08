@@ -26,11 +26,21 @@ class CartController extends Controller
     }
 
     public function addItem(Request $request){
-        $id = $request['id'];
+        $item = [
+            'id' => $request['id'],
+            'quantity' => $request['quantity']
+        ];
+
         $session = is_numeric(session('item')) || session('item') === null ? session(['item' => []]) : session('item');
 
-        array_push($session, $request['id']);
+        if($this->keyExist($request['id']) !== false){
+            $session[$this->keyExist($request['id'])] = $item;
+        }else{
+            array_push($session, $item);
+        }
+
         session(['item' => $session]);
+        return session('item');
     }
 
     public function getItem(){
@@ -47,5 +57,14 @@ class CartController extends Controller
             )
             ->whereIn('products.id', $session)
             ->get();
+    }
+
+    public function keyExist($id){
+        for ($i = 0; $i < sizeof(session('item')); $i++){
+            if ($id == session('item')[$i]['id']){
+                return $i;
+            }
+        }
+        return false;
     }
 }

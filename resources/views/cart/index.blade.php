@@ -5,7 +5,7 @@
 
     <div class="header-mt">
         <div class="flex-container-column">
-            <h1 class="page-title" id="home_title_1">Votre panier</h1>
+            <h1 class="page-title" id="home_title_1">{{ trans('panier.titre1') }}</h1>
         </div>
     </div>
    <div style="background-color: white;" class="header-mt">
@@ -23,7 +23,7 @@
            <input type="hidden" name="shipping_{{ $i }}" value="2.50">
         @endfor
 
-        <input type="submit" value="Payer">
+        <input type="submit" value="Payer" id="smaug">
     {!! Form::close() !!}
 
 
@@ -38,10 +38,30 @@
 
         @empty
 
-            Vous n'avez rien ajouté a votre panier
+           {{ trans('panier.annonce1') }}
 
         @endforelse
 
     </div>
+
+@endsection
+
+
+@section('script')
+
+    <script>
+        $(document).ready(function(){
+
+            $('#smaug').on('click', function (e) {
+                var data = {!! $data !!}
+                e.preventDefault();
+                $.post('{!! url('pdf') !!}', {
+                    "_token": $(e.target).parent()[0][0].value,
+                    "data": data
+                })
+            });
+
+        });
+    </script>
 
 @endsection

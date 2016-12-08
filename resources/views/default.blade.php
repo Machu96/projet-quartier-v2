@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<<<<<<< HEAD
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,14 +23,14 @@
     </div>
     <div class="menu">
         <ul class="content-menu">
-            <a href="{{ route('home') }}"><li>Accueil</li></a>
-            <a href="{{ action('PlaceController@index') }}"><li>Lieux culturels</li></a>
-            <a href="{{ action('CatalogController@index') }}"><li>Produits</li></a>
-            <a href="{{ action('JourneyController@index') }}"><li>Parcours</li></a>
-            <a href="{{ action('CartController@index') }}"><li>Mon panier</li></a>
+            <a href="{{ route('home') }}"><li>{{ trans('menu.home') }}</li></a>
+            <a href="{{ action('PlaceController@index') }}"><li>{{ trans('menu.lieux') }}</li></a>
+            <a href="{{ action('CatalogController@index') }}"><li>{{ trans('menu.produit') }}</li></a>
+            <a href="{{ action('JourneyController@index') }}"><li>{{ trans('menu.parcours') }}</li></a>
+            <a href="{{ action('CartController@index') }}"><li>{{ trans('menu.panier') }}</li></a>
 
 
-            <a href="{{ action('DashboardController@analytics') }}"><li>Admin</li></a>
+            <a href="{{ action('DashboardController@analytics') }}"><li>{{ trans('menu.connexion') }}</li></a>
             <li class="flex-container" id="flags-form">
                 <form action="{!! url('language/fr') !!}" method="GET">
                     <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -98,7 +99,7 @@
                             blackLayout.classList.add('active');
                         }else {
                             icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
+                                icon.classList.add('fa-bars');
                             blackLayout.classList.remove('active');
                         }
                         e.preventDefault();
@@ -111,5 +112,4 @@
 </script>
 
 </body>
-
 </html>

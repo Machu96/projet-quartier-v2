@@ -793,6 +793,10 @@ Burger_menu
         /*transform: translateY(60vw);*/
 
     }
+    .menu li{
+        font-family: "Playfair Display", TWCentMT, sans-serif;
+        text-transform: inherit;
+    }
 
     .barre-menu{
         position: absolute;
