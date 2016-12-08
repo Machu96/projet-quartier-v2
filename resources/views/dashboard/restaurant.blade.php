@@ -12,13 +12,23 @@
     {!! Form::open(['url' => url('restaurants'), 'method' => 'post', 'files' => true]) !!}
 
     <div class="form-group">
-        <label for="name">Nom</label>
-        <input name="name" id="name" class="form-control" type="text">
+        <label for="name-fr">Nom</label>
+        <input name="name-fr" id="name-fr" class="form-control" type="text">
     </div>
 
     <div class="form-group">
-        <label for="description">Description</label>
-        <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+        <label for="description-fr">Description</label>
+        <textarea class="form-control" name="description-fr" id="description-fr" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="name-en">Nom anglais</label>
+        <input name="name-en" id="name-en" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="description-en">Description anglaise</label>
+        <textarea class="form-control" name="description-en" id="description-en" cols="30" rows="10"></textarea>
     </div>
 
     <div class="form-group">
