@@ -55,6 +55,17 @@
 
 
     {!! Form::close() !!}
+    <div class="flex-container">
+        @foreach($restaurants as $restaurant)
 
+            <div class="item_gallery">
+                <h1>{{ $restaurant->name }}</h1>
+                <img src="/storage/app/public/restaurants/{{$restaurant->url }}">
+                <p>{{ $restaurant->description }}</p>
+                <button type="button" class="btn btn-warning">Supprimer</button>
+            </div>
+
+        @endforeach
+    </div>
 
 @endsection
