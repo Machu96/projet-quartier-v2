@@ -1,8 +1,8 @@
 @extends('default')
 
-<div class="header header-page"></div>
-@section('content')
 
+@section('content')
+    <div class="header header-page"></div>
     <div class="header-mt">
         <div class="flex-container-column">
         <h1 class="page-title" id="home_title_1">{{ trans('parcours.titre1') }}</h1>

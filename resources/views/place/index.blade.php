@@ -1,10 +1,9 @@
 @extends('default')
 
 
-<div class="header header-page"></div>
+
 @section('content')
-
-
+    <div class="header header-page"></div>
     <div class="header-mt">
         <div class="flex-container-column">
             <h1 class="page-title" id="home_title_1">{{ trans('Lieux_culturels.titre1') }}</h1>
