@@ -26,14 +26,14 @@
             </div>
         </div>
 
-        <div class ="flex-container" id="event_container" onmouseover="setTimeout(countdown)">
+        <div class ="flex-container" id="event_container" >
             @foreach ($events as $event  )
 
             <div class="event">
                 <div class="event-header">
                     <div>
                         <div class="event-title">{{$event->name}}</div>
-                        <div class="event-place">?????</div>
+                        <div class="event-place">@ {{$event->place}} </div>
                         <div class="event-hour">
                             <?php
                             $date = date_create($event->date);
@@ -55,6 +55,7 @@
                     </div>
                 </div>
                 <div class="event-description">
+                    <img src="../storage/app/public/events/{{ $event->url }}" >
                     <p>{{$event->description}}</p>
                 </div>
 
@@ -64,11 +65,11 @@
         
         @foreach($events as $e)
 
-            <img src="{{  Storage::get('public/events/' . $e->url)  }}" alt="">
+
 
         @endforeach
         
-        <div id="datavision_container" class="flex-container">
+        <div id="datavision_container" class="flex-container" onmouseover="setTimeout(countdown)">
             <div class="home-datavision">
                 <div class="home-datavision-number" id="compteur1">0</div>
                 <div class="home-datavision-description">{{ trans('homepage.datavision1') }}</div>
