@@ -19,8 +19,8 @@
 
         @for($i = 1; $i <= sizeof($data); $i++)
            <input type="hidden" name="item_name_{{$i}}" value="{{ $data[$i - 1]->productName }}">
-           <input type="hidden" name="amount_{{ $i }}" value="2.00">
-           <input type="hidden" name="shipping_{{ $i }}" value="2.50">
+           <input type="hidden" name="amount_{{ $i }}" value="{{ $data[$i - 1]->productPrice }}">
+           <input type="hidden" name="quantity_{{$i}}" value="{{ $data[$i - 1]->quantity }}">
         @endfor
 
         <input type="submit" value="Payer" id="smaug">
