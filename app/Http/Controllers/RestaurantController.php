@@ -33,8 +33,10 @@ class RestaurantController extends Controller
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
         $request->image->storeAs('public/restaurants', $urlImage);
 
-        $restaurant->name = $request->name;
-        $restaurant->description = $request->description;
+        $restaurant->nameFr = $request->nameFr;
+        $restaurant->nameEn = $request->nameEn;
+        $restaurant->descriptionFr = $request->descriptionFr;
+        $restaurant->descriptionEn = $request->descriptionEn;
         $restaurant->address = $request->address;
         $restaurant->latitude = $request->latitude;
         $restaurant->longitude = $request->longitude;

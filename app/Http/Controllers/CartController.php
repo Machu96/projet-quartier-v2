@@ -17,10 +17,20 @@ class CartController extends Controller
                 'shops.name as shopName',
                 'products.name'.session('locale').' as productName',
                 'products.stock as productStock',
-                'products.description'.session('locale').' as productDescription'
+                'products.description'.session('locale').' as productDescription',
+                'products.price as productPrice'
             )
             ->whereIn('products.id', $cart)
             ->get();
+
+        foreach ($data as $d){
+            foreach ($cart as $c){
+                if($c['id'] == $d->productId){
+                    $d->quantity = $c['quantity'];
+                    $d->total = $c['quantity'] * $d->productPrice;
+                }
+            }
+        }
 
         return view('cart.index', compact('data'));
     }
@@ -61,6 +71,7 @@ class CartController extends Controller
 
     public function keyExist($id){
         for ($i = 0; $i < sizeof(session('item')); $i++){
+
             if ($id == session('item')[$i]['id']){
                 return $i;
             }

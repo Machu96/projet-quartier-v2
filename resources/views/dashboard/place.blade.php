@@ -17,8 +17,8 @@
     </div>
 
     <div class="form-group">
-        <label for="descriptionFr">Description</label>
-        <textarea class="form-control" name="descriptionFr" id="descriptionFr" cols="30" rows="10"></textarea>
+        <label for="decriptionFr">Description</label>
+        <textarea class="form-control" name="descriptionFr" id="decriptionFr" cols="30" rows="10"></textarea>
     </div>
 
     <div class="form-group">
@@ -27,8 +27,8 @@
     </div>
 
     <div class="form-group">
-        <label for="descriptionEn">Description anglaise</label>
-        <textarea class="form-control" name="descriptionEn" id="descriptionEn" cols="30" rows="10"></textarea>
+        <label for="decriptionEn">Description anglaise</label>
+        <textarea class="form-control" name="decriptionEn" id="decriptionEn" cols="30" rows="10"></textarea>
     </div>
 
     <div class="form-group">

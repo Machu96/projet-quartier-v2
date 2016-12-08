@@ -27,14 +27,17 @@
     {!! Form::close() !!}
 
 
-    @forelse($data as $d)
+        @forelse($data as $d)
 
-        <div class="grid-3 pam">
-            <div class="three-quarters"> <h3>{{ $d->productName }}</h3>
-                <p class="word-break">{{ $d->productDescription }}</p>
+            <div class="grid-3 pam">
+                <div class="three-quarters"> <h3>{{ $d->productName }}</h3>
+                    <p class="word-break">{{ $d->productDescription }}</p>
+                </div>
+                <div class="one-quarter">{{ $d->shopName}}</div>
+                <div>{{ $d->productPrice }} €</div>
+                <div>{{ $d->quantity }}</div>
+                <div>{{ $d->total }} €</div>
             </div>
-            <div class="one-quarter">{{ $d->shopName}}</div>
-        </div>
 
         @empty
 
@@ -65,3 +68,4 @@
     </script>
 
 @endsection
+
