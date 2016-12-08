@@ -93,6 +93,9 @@ iframe{
 .header-page{
     height:505px;
 }
+.barre-menu{
+    display: none;
+}
 /*--------------------------------------------------
 	CONTAINER
 --------------------------------------------------*/
@@ -589,6 +592,9 @@ Media Queries
 
 }
 @media only screen and (max-width:770px){
+    .barre-menu{
+        display: inline;
+    }
     .container-text{
         width: auto;
     }
@@ -747,7 +753,7 @@ Burger_menu
     display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1010px) {
     .mobile{
         display: inherit;
     }
