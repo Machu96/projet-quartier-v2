@@ -10,14 +10,14 @@ class PdfController extends Controller
 {
     public function generate(Request $request,PDF $pdf){
 
-        dd($request);
+        $data = json_decode($request->data);
         $items = DB::table('products')
             ->select(
                 'products.name' . session('locale') . ' as productName',
                 'products.price as productPrice'
             )
             ->get();
-        $pdf = $pdf->loadView('bill.index', compact('items'));
+        $pdf = $pdf->loadView('bill.index', compact('data'));
         return $pdf->download('invoice.pdf');
     }
 }

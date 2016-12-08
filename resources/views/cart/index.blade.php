@@ -26,7 +26,10 @@
         <input type="submit" value="Payer" id="smaug">
     {!! Form::close() !!}
 
-
+       {!! Form::open(['method' => 'post', 'url' => url('pdf')]) !!}
+       <input type="hidden" value="{{ $data }}" name="data">
+            <button type="submit">Facture PDF</button>
+        {!! Form::close() !!}
         @forelse($data as $d)
 
             <div class="grid-3 pam">
@@ -53,18 +56,7 @@
 @section('script')
 
     <script>
-        $(document).ready(function(){
-/*
-            $('#smaug').on('click', function (e) {
-                var data = {!! $data !!}
-                e.preventDefault();
-                $.post('{!! url('pdf') !!}', {
-                    "_token": $(e.target).parent()[0][0].value,
-                    "data": data
-                })
-            });*/
 
-        });
     </script>
 
 @endsection

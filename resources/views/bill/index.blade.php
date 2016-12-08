@@ -110,42 +110,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Samsung Galaxy S5</td>
-                                    <td class="text-center">$900</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-right">$900</td>
-                                </tr>
-                                <tr>
-                                    <td>Samsung Galaxy S5 Extra Battery</td>
-                                    <td class="text-center">$30.00</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-right">$30.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Screen protector</td>
-                                    <td class="text-center">$7</td>
-                                    <td class="text-center">4</td>
-                                    <td class="text-right">$28</td>
-                                </tr>
-                                <tr>
-                                    <td class="highrow"></td>
-                                    <td class="highrow"></td>
-                                    <td class="highrow text-center"><strong>Subtotal</strong></td>
-                                    <td class="highrow text-right">$958.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="emptyrow"></td>
-                                    <td class="emptyrow"></td>
-                                    <td class="emptyrow text-center"><strong>Shipping</strong></td>
-                                    <td class="emptyrow text-right">$20</td>
-                                </tr>
-                                <tr>
-                                    <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
-                                    <td class="emptyrow"></td>
-                                    <td class="emptyrow text-center"><strong>Total</strong></td>
-                                    <td class="emptyrow text-right">$978.00</td>
-                                </tr>
+                                @foreach($data as $d)
+                                    <tr>
+                                        <td>{{ $d->productName }}</td>
+                                        <td class="text-center">{{ $d->productPrice }}</td>
+                                        <td class="text-center">{{ $d->quantity }}</td>
+                                        <td class="text-right">{{ $d->total }}</td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
