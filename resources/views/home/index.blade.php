@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div id="event_container">
             <?php foreach (['oui'] as $oui){/* ?>
             <div class="event">

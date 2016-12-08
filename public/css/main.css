@@ -28,9 +28,11 @@
 --------------------------------------------------*/
 html body{
     height: 100%;
+    min-height: 100%;
     width: 100%;
     margin:0;
     padding:0;
+    background-color: #222;
 }
 /*
 body {
@@ -121,7 +123,9 @@ iframe{
     transform: rotate(1deg);
 }
 
-
+.header{
+    display: none;
+}
 
 /*--------------------------------------------------
 	Drapeaux
@@ -165,6 +169,7 @@ iframe{
     box-shadow: 1px 1px 7px #000;
     font-size: 1em;
     line-height: 2.2em;
+    z-index: 1;
 }
 
 #map_icon{
@@ -663,34 +668,15 @@ Burger_menu
 .nav-button {
     display: none; /* no button by default */
     position: absolute;
-    top: 1rem;
+    top: 0.8rem;
     left: 1rem;
-    z-index: 1; /* will be above everything */
+    z-index: 17; /* will be above everything */
     height: 2.4rem;
     width: 2.8rem;
-    /*background-color: transparent;
-    background-image: linear-gradient(to right, currentColor, currentColor);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 5px;
-    padding: 0;
-    outline: 0;
-    border: 0;*/
+    font-size: 0.8em;
     color: #333;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-}
-.nav-button::before,
-.nav-button::after {
-    /*content: "";
-    position: absolute;
-    left: 0; right: 0;
-    display: block;
-    height: 5px;
-    background: currentColor;
-    transition: .25s;*/
-    /*transition-property: transform, top;
-    will-change: transform, top;*/
 }
 .nav-button::before {
     top: 0;
@@ -700,6 +686,11 @@ Burger_menu
 }
 .navigation {
     background: #333;
+}
+.navigation ul {
+    background-color: rgba(0,0,0,0.7);
+    z-index: 11;
+    padding-top: 3vh;
 }
 .navigation > a {
     display: block;
@@ -714,44 +705,131 @@ Burger_menu
 .navigation > a:active {
     background: #555;
 }
-@media (max-width: 500px) {
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .mobile{
+        display: inherit;
+    }
+
+    @keyframes black-layout-fade-in {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 0.7;
+        }
+    }
+    .mobile.black-layout{
+        display: none;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        position: fixed;
+        opacity: 0;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        overflow:hidden;
+        /*animation: black-layout-fade-in 0.5s forwards reverse;*/
+    }
+    .mobile.black-layout.active{
+        display: inherit;
+        animation: black-layout-fade-in 0.5s forwards;
+    }
     .js-enabled .nav-button {
         display: inline-block;
     }
-    .js-enabled .menu {
+    /* styling opened nav */
+    .js-enabled .main {
+        position: absolute;
+        /*transition: transform .25s;
+        will-change: transform;*/
+        top:0;
+        z-index: 13;
+    }
+    .js-enabled .main.is-opened {
+        /*transform: translateY(60vw);*/
+
+    }
+
+    .barre-menu{
         position: absolute;
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 0; /* will be under everything */
-    }
+        z-index: 12; /* will be under everything */
 
-    /* styling opened nav */
-    .js-enabled .main {
-        position: absolute;
-        transition: transform .25s;
-        will-change: transform;
-        top:0;
-    }
-    .js-enabled .main.is-opened {
-        transform: translateY(60vw);
-
-    }
-
-    .menu li{
-        display: none;
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        height: 40px;
+        box-shadow: 0 0 7px #444;
+        display: block;
     }
     .menu{
-        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        background: none;
     }
+    .content-menu li{
+        color: #fff;
+        font-family: "Playfair Display";
+        text-transform: none;
+        border-bottom: solid 1px rgba(80,80,80,0.7);
+        background-color: rgba(0,0,0,0.7);
+        padding: 8px 15px 8px 15px !important;
+
+    }
+    .content-menu a{
+        color: #eee;
+        font-family: "Playfair Display";
+    }
+    .content-menu{
+        position: relative;
+        top: -87vh;
+        padding: 0px;
+        width: 100%;
+        transition: transform .5s;
+        will-change: transform;
+    }
+    @keyframes opening-nav {
+        to{
+            top: 40px;
+        }
+    }
+    .content-menu.is-opened{
+        transform: translateY(118vh);
+        /*animation: opening-nav 0.7s linear forwards;*/
+    }
+
+    .mobile.title{
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 0.3em;
+        position: relative;
+        z-index: 13;
+    }
+    #datavision_container{
+        padding: 0px 0px 0px 0px;
+    }
+    .page-title{
+        padding: 0 0 5px 0 !important;
+        width: 100% !important;
+        font-size: 1.4em !important;
+    }
+    .header{
+        display: inherit;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        font-family:"Playfair Display";
+        background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
+        background-size: cover;
+    }
+
+	#footer-picture{
+		display: none;
+	}
 }
-
-.header{
-    width: 100%;
-    height: 400px;
-    font-family:"Playfair Display";
-    background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
-    background-size: 100%;
-
-}
-
