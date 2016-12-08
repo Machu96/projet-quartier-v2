@@ -113,6 +113,7 @@ iframe{
     background-color: white;
     box-shadow: 0px 0px 20px #000000;
     margin: 0.3em;
+    text-align: center;
 }
 #home_title_1{
     padding: 0px 65px 5px 65px;
@@ -124,7 +125,13 @@ iframe{
 }
 
 .header{
-    display: none;
+    display: inherit;
+    background: url(../img/background-vieux-lyon.jpg) no-repeat top center;
+    background-size: cover;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 /*--------------------------------------------------
@@ -688,9 +695,18 @@ Burger_menu
     background: #333;
 }
 .navigation ul {
-    background-color: rgba(0,0,0,0.7);
+    /*background-color: rgba(0,0,0,0.7);*/
     z-index: 11;
     padding-top: 3vh;
+    display: flex;
+    width: 80%;
+    left: 10%;
+}
+
+.navigation li {
+    flex: 1;
+    margin-top: 1.8em;
+    text-align: center;
 }
 .navigation > a {
     display: block;
@@ -778,17 +794,27 @@ Burger_menu
         font-family: "Playfair Display";
         text-transform: none;
         border-bottom: solid 1px rgba(80,80,80,0.7);
-        background-color: rgba(0,0,0,0.7);
+        /*background-color: rgba(0,0,0,0.7);*/
         padding: 8px 15px 8px 15px !important;
-
+        text-align: inherit;
+        margin-top: 0;
     }
+    .navigation ul {
+        background-color: rgba(0,0,0,0.7);
+        z-index: 11;
+        padding-top: 7vh;
+        display: inline;
+        left: 0;
+        width: 100%;
+    }
+
     .content-menu a{
-        color: #eee;
+        color: #fff;
         font-family: "Playfair Display";
     }
     .content-menu{
         position: relative;
-        top: -87vh;
+        top: -310px;
         padding: 0px;
         width: 100%;
         transition: transform .5s;
@@ -799,8 +825,11 @@ Burger_menu
             top: 40px;
         }
     }
+    #map_icon{
+        display: none;
+    }
     .content-menu.is-opened{
-        transform: translateY(118vh);
+        transform: translateY(500px);
         /*animation: opening-nav 0.7s linear forwards;*/
     }
 
@@ -818,15 +847,24 @@ Burger_menu
         padding: 0 0 5px 0 !important;
         width: 100% !important;
         font-size: 1.4em !important;
+        margin-top: 5vh !important;
     }
     .header{
+        z-index: -1;
+        top: 40px;
         display: inherit;
         width: 100%;
-        height: 100vh;
         position: absolute;
         font-family:"Playfair Display";
         background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
         background-size: cover;
+    }
+    .header-homepage{
+        height: 100vh;
+
+    }
+    .header-page{
+        height: 20vh;
     }
 
 	#footer-picture{

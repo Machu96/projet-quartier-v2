@@ -5,7 +5,7 @@
 @extends('default')
 
 @section('content')
-
+    <div class="header header-home"></div>
     <div class="flex-container">
 
         <div class="flex-container-column" id="home_page">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="event_container">
             <?php foreach (['oui'] as $oui){/* ?>
             <div class="event">
