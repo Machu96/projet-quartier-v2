@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+
     return view('home.index', [
         'events' => DB::table('events')->get()
     ]);
@@ -46,11 +47,15 @@ Route::resource('events', 'EventController');
 Route::resource('places', 'PlaceController');
 Route::resource('orders', 'OrderController');
 Route::resource('restaurants', 'RestaurantController');
+Route::resource('paypal', 'PaypalController');
 
 Route::get('language/{lang}', function($lang){
-    App::setLocale($lang);
+    session()->put('locale', $lang);
     return redirect()->back();
 });
+Route::get('pdf', 'PdfController@generate');
+
+/*Admin*/
 
 Route::group(['prefix' => 'admin'], function(){
 
@@ -64,4 +69,3 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('get-shops/{query}', 'DashboardController@getShops');
 
 });
-
