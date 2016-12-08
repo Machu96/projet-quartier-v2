@@ -1,7 +1,7 @@
 @extends('default')
 
 
-
+<div class="header header-page"></div>
 @section('content')
 
 
