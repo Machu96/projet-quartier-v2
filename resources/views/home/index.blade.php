@@ -1,7 +1,3 @@
-{{--
-
---}}
-
 @extends('default')
 
 @section('content')
@@ -11,7 +7,7 @@
         <div class="flex-container-column" id="home_page">
             <h1 class="page-title" id="home_title_1">Venez découvrir</h1>
             <h1 class="page-title" id="home_title_2">le plus vieux quartier de Lyon</h1>
-            <h2 id="button_parcours">Organisez votre propre visite du quartier <img src="img\map-icon-white.svg" id="map_icon"/></h2>
+            <h2 id="button_parcours">Organisez votre propre visite du quartier <a href="{{ action('JourneyController@index') }}"><img  src="img\map-icon-white.svg" id="map_icon"/></a></h2>
         </div>
 
         <div id="home_history">
@@ -30,52 +26,63 @@
             </div>
         </div>
 
-        <div id="event_container">
-            <?php foreach (['oui'] as $oui){/* ?>
+        <div class ="flex-container" id="event_container" onmouseover="setTimeout(countdown)">
+            @foreach ($events as $event  )
+
             <div class="event">
                 <div class="event-header">
-                    <div class="event-title"><?= $event['name'] ?></div>
-                    <div class="event-place">@ <?=$event['place'] ?></div>
-                    <div class="event-hour">
-                        <?php
-                        $date = date_create($event['date']);
-                        echo $date->format('M d')
-                        ?>
-                        @ <?= $date->format('H\hi') ?>
+                    <div>
+                        <div class="event-title">{{$event->name}}</div>
+                        <div class="event-place">?????</div>
+                        <div class="event-hour">
+                            <?php
+                            $date = date_create($event->date);
+                            echo $date->format('M d')
+                            ?>
+                            @ <?= $date->format('H\hi') ?>
+                        </div>
+                    </div>
+                    <div class="event-date">
+                        <div class="month">
+                            <?= $date->format('M') ?>
+                        </div>
+                        <div class="day">
+                            <?= $date->format('d') ?>
+                        </div>
+                        <div class="dayWeek">
+                            <?= $date->format('D') ?>
+                        </div>
                     </div>
                 </div>
-                <div class="event-date">
-                    <div class="month">
-                        <?= $date->format('M') ?>
-                    </div>
-                    <div class="day">
-                        <?= $date->format('d') ?>
-                    </div>
-                    <div class="dayWeek">
-                        <?= $date->format('D') ?>
-                    </div>
+                <div class="event-description">
+                    <p>{{$event->description}}</p>
                 </div>
+
             </div>
-            <?php */} ?>
+           @endforeach
         </div>
+        
+        @foreach($events as $e)
+
+            <img src="{{  Storage::get('public/events/' . $e->url)  }}" alt="">
+
+        @endforeach
+        
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
-                <div class="home-datavision-number">352</div>
-                <div class="home-datavision-description">monuments culturels</div>
+                <div class="home-datavision-number" id="compteur1">0</div>
+                <div class="home-datavision-description">Monuments culturels</div>
             </div>
             <div class="home-datavision">
-                <div class="home-datavision-number">15</div>
-                <div class="home-datavision-description">traboules</div>
+                <div class="home-datavision-number" id="compteur2">0</div>
+                <div class="home-datavision-description">Traboules</div>
             </div>
             <div class="home-datavision">
-                <div class="home-datavision-number">100%</div>
-                <div class="home-datavision-description">des habitants se disent heureux dans ce quartier :)</div>
+                <div class="home-datavision-number"><span id="compteur3">0</span><span>%</span></div>
+                <div class="home-datavision-description">Des habitants se disent heureux dans ce quartier</div>
             </div>
         </div>
-
-
     </div>
-
 
 @endsection
 
@@ -83,6 +90,39 @@
 
 @section('script')
 
-    {{-- Mettre le jQuery ici --}}
+   <script>
+
+       var cpt = 0; // Initialisation du compteur
+       var cpt2 = 0; // Initialisation du compteur
+       var cpt3 = 0; // Initialisation du compteur
+       var duree = 5; // Durée en seconde pendant laquel le compteur ira de 0 à
+       var delta = Math.ceil((duree * 100) / 35); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
+       var delta2 = Math.ceil((duree * 100) / 15); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
+       var delta3 = Math.ceil((duree * 100) / 100); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
+       var node =  document.getElementById("compteur1"); // On récupère notre noeud où sera rafraîchi la valeur du compteur
+       var node2 =  document.getElementById("compteur2"); // On récupère notre noeud où sera rafraîchi la valeur du compteur
+       var node3 =  document.getElementById("compteur3"); // On récupère notre noeud où sera rafraîchi la valeur du compteur
+
+       function countdown() {
+
+           if( cpt < 35 ) {
+               node.innerHTML = ++cpt;// Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+               setTimeout(countdown, delta);
+           }
+           else if (cpt2 < 15) { // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+               node2.innerHTML = ++cpt2;
+               setTimeout(countdown, delta2);
+           }
+           else{
+
+               if (cpt3 < 100) {
+                   node3.innerHTML = ++cpt3;// Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+                   setTimeout(countdown, delta3);
+               }
+           }
+       }
+
+
+   </script>
 
 @endsection

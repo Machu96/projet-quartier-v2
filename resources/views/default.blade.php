@@ -18,7 +18,6 @@
 <nav class="navigation">
     <div class="barre-menu" role="main">
         <a href="#" class="nav-button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
-        {{--<button class="nav-button" role="button" type="button" aria-label="navigation"></button>--}}
         <h2 class="mobile title">Vieux Lyon</h2>
     </div>
     <div class="menu">
@@ -29,20 +28,13 @@
             <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
             <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
 
-            <li>
-                <button id="pdf">PDF</button>
-            </li>
 
             <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
-            <li id="flags-form">
+            <li class="flex-container" id="flags-form">
                 <form action="{!! url('language/fr') !!}" method="GET">
                     <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     <button type="submit" name="lang" value="fr">
-                        <svg class="flag" xmlns="http://www.w3.org/2000/svg" width="45" height="30">
-                            <rect width="45" height="30" fill="#ED2939"/>
-                            <rect width="30" height="30" fill="#fff"/>
-                            <rect width="15" height="30" fill="#002395"/>
-                        </svg>
+                        <svg class="flag" xmlns="http://www.w3.org/2000/svg" width="45" height="30"><rect width="45" height="30" fill="#ED2939"/><rect width="30" height="30" fill="#fff"/><rect width="15" height="30" fill="#002395"/></svg>
                     </button>
                 </form>
                 <form action="{!! url('language/en') !!}" method="GET">
@@ -66,8 +58,6 @@
 </nav>
 <div class="mobile black-layout"></div>
 
-{{-- <div class="header"></div> --}}
-
 @yield('content')
 <div id="footer-picture">
     <footer>
@@ -75,30 +65,11 @@
     </footer>
 </div>
 
-
-
-
-
 {!! Html::script('js/jquery.js') !!}
 @yield('script')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
 <script>
-    $(document).ready(function () {
-
-        $('#pdf').on('click', function () {
-
-            $.get('{!! url('bill') !!}')
-                    .then(function (response) {
-                        var doc = new jsPDF();
-                        doc.text(response, 10, 10)
-                        doc.save('a4.pdf')
-                        console.log(reponse)
-                    });
-
-        });
-
-    });
 
     (function() {
 
@@ -140,4 +111,5 @@
 </script>
 
 </body>
+
 </html>

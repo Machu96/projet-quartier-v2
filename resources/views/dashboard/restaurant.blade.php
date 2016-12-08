@@ -11,32 +11,42 @@
 
     {!! Form::open(['url' => url('restaurants'), 'method' => 'post', 'files' => true]) !!}
 
-    <div class="input-group">
-        <label for="name">Nom</label>
-        <input name="name" id="name" class="form-control" type="text">
+    <div class="form-group">
+        <label for="nameFr">Nom</label>
+        <input name="nameFr" id="nameFr" class="form-control" type="text">
     </div>
 
-    <div class="input-group">
-        <label for="description">Description</label>
-        <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+    <div class="form-group">
+        <label for="descriptionFr">Description</label>
+        <textarea class="form-control" name="descriptionFr" id="descriptionFr" cols="30" rows="10"></textarea>
     </div>
 
-    <div class="input-group">
+    <div class="form-group">
+        <label for="nameEn">Nom anglais</label>
+        <input name="nameEn" id="nameEn" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="descriptionEn">Description anglaise</label>
+        <textarea class="form-control" name="descriptionEn" id="descriptionEn" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
         <label for="address">Adresse</label>
         <input name="address" id="address" class="form-control" type="text">
     </div>
 
-    <div class="input-group">
+    <div class="form-group">
         <label for="latitude">Latitude</label>
         <input name="latitude" id="latitude" class="form-control" type="number">
     </div>
 
-    <div class="input-group">
+    <div class="form-group">
         <label for="longitude">Longitude</label>
         <input name="longitude" id="longitude" class="form-control" type="number">
     </div>
 
-    <div class="input-group">
+    <div class="form-group">
         <label for="image">Longitude</label>
         <input class="form-control" name="image" id="image" type="file">
     </div>
