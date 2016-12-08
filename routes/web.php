@@ -58,7 +58,7 @@ Route::get('language/{lang}', function($lang){
     session()->put('locale', $lang);
     return redirect()->back();
 });
-Route::get('pdf', 'PdfController@generate');
+Route::post('pdf', 'PdfController@generate');
 
 /*Admin*/
 

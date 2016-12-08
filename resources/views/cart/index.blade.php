@@ -23,7 +23,7 @@
            <input type="hidden" name="shipping_{{ $i }}" value="2.50">
         @endfor
 
-        <input type="submit" value="Payer">
+        <input type="submit" value="Payer" id="smaug">
     {!! Form::close() !!}
 
 
@@ -43,5 +43,25 @@
         @endforelse
 
     </div>
+
+@endsection
+
+
+@section('script')
+
+    <script>
+        $(document).ready(function(){
+
+            $('#smaug').on('click', function (e) {
+                var data = {!! $data !!}
+                e.preventDefault();
+                $.post('{!! url('pdf') !!}', {
+                    "_token": $(e.target).parent()[0][0].value,
+                    "data": data
+                })
+            });
+
+        });
+    </script>
 
 @endsection
