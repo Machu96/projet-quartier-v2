@@ -14,7 +14,12 @@
 Route::get('/', function () {
 
     return view('home.index', [
-        'events' => DB::table('events')->get()
+        'events' => DB::table('events')->select(
+            'name' . session('locale') . ' as name',
+            'description' . session('locale') . ' as description',
+            'date',
+            'url'
+        )->get()
     ]);
 })->name('home');
 
