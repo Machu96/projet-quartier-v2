@@ -33,14 +33,9 @@ html body{
     margin:0;
     padding:0;
     background-color: #222;
-}
-/*
-body {
     font-family:"Playfair Display" ;
-    background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
-    background-size: 100%;
 }
-*/
+
 
 a{
     text-decoration: none;
@@ -92,6 +87,12 @@ iframe{
 .sub-menu li {
     display: inline-block;
 }
+.header-home{
+    height: 100vh;
+}
+.header-page{
+    height:505px;
+}
 /*--------------------------------------------------
 	CONTAINER
 --------------------------------------------------*/
@@ -126,7 +127,7 @@ iframe{
     display: inherit;
     background: url(../img/background-vieux-lyon.jpg) no-repeat top center;
     background-size: cover;
-    height: 90vh;
+
     position: absolute;
     top: 0;
     width: 100%;
@@ -181,7 +182,7 @@ li.content-menu{
 	HOME PAGE
 --------------------------------------------------*/
 #home_page{
-    height: 90vh;
+    height: 95vh;
     text-align: center;
 }
 #button_parcours{
