@@ -8,8 +8,10 @@
 
 
 return[
-    'titre1' => 'Organisez votre parcour',
-    'titre_P2' => 'Durée 2H',
+    'titre1' => 'Organisez votre parcours',
+    'titre_P1' => 'Départ (Durée : 1h00 )',
+    'titre_P2' => 'Départ (Durée : 2h00 )',
+    'titre_P3' => 'Départ (Durée : 3h00 )',
     'P1' => 'Parcours 1H',
     'P2' => 'Parcours 2H',
     'P3' => 'Parcours 3H',

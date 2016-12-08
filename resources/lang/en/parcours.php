@@ -8,7 +8,9 @@
 
 return[
     'titre1' => 'Organize your own trip',
-    'titre_P2' => 'Start (Duration 2H)',
+    'titre_P1' => 'Start (Duration 1h00)',
+    'titre_P2' => 'Start (Duration 2h00)',
+    'titre_P3' => 'Start (Duration 3h00)',
     'P1' => '1H trip',
     'P2' => '2H trip',
     'P3' => '3H trip',

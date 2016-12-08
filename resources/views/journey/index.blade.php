@@ -5,23 +5,23 @@
 
     <div class="header-mt">
         <div class="flex-container-column">
-        <h1 class="page-title" id="home_title_1">Organisez votre parcours</h1>
+        <h1 class="page-title" id="home_title_1">{{ trans('parcours.titre1') }}</h1>
         </div>
     </div>
 
     <div id="section-parcours" class="header-mt">
         <ul id="parcours-menu" class="tab">
-            <li><a id="defaultOpen" href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours1')">Parcours 1h</a></li>
-            <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours2')">Parcours 2h</a></li>
-            <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours3')">Parcours 3h</a></li>
-            <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'votreparcours')">Votre parcours</a></li>
+            <li><a id="defaultOpen" href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours1')">{{ trans('parcours.P1') }}</a></li>
+            <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours2')">{{ trans('parcours.P2') }}</a></li>
+            <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'parcours3')">{{ trans('parcours.P3') }}</a></li>
+            <li><a href="javascript:void(0)" class="tablinks" onclick="openparcours(event, 'votreparcours')">{{ trans('parcours.PP') }}</a></li>
         </ul>
         <div id="parcours1" class="tabcontent flex-container">
             <div class="container-text journey-text">
                 <p>
-                    Cette visite en boucle dure environ 1h. Elle vous permet de faire connaissance avec le quartier du vieux lyon.
+                    {{ trans('parcours.desc_P1') }}
                 </p>
-                <h2>Départ (Durée : 1h00 ) </h2>
+                <h2>{{ trans('parcours.titre_P1') }}</h2>
                 <ul>
                     <li>1 -  Cathédrale Saint Jean</li>
                     <li>2 -  Maison des avocats</li>
@@ -50,7 +50,7 @@
                 <p>
                     Cette visite en boucle dure environ 2h. Elle vous permet d'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d'être exhaustive, elle permet de se familiariser avec les lieux.
                 </p>
-                <h2>Départ (Durée : 2h00 ) </h2>
+                <h2>{{ trans('parcours.titre_P2') }}</h2>
                 <ul>
                     <li>1 -  Cathédrale Saint Jean</li>
                     <li>2 -  3/5 rue des Antonins</li>
@@ -88,7 +88,7 @@
                 <p>
                     Cette visite en boucle dure environ 2h. Elle vous permet d'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d'être exhaustive, elle permet de se familiariser avec les lieux.
                 </p>
-                <h2>Départ (Durée : 3 - 4h30)</h2>
+                <h2>{{ trans('parcours.titre_P3') }}</h2>
                 <ul>
                     <li>1. Cathédrale Saint Jean</li>
                     <li>2. Palais de Justice</li>
