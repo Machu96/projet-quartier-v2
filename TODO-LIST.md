@@ -9,3 +9,4 @@
 - [ ] Intégrer la page Mentions légales
 - [ ] Gérer le responsive général du site
 - [ ] Réussir à bien afficher les évènements du site
+- [ ] Régler le problème des heures à l'affichage sur la page (elles sont bonne en base)
