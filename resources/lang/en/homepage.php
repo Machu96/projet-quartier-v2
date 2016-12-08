@@ -7,15 +7,15 @@
  */
 
 return [
-    'titre1' => 'Venez découvrir',
-    'titre2' => 'le plus vieux quartier de Lyon',
-    'titre3' => 'Organisez votre propre visite du quartier',
-    'histoire' => "Un peu d'histoire...",
+    'titre1' => 'Come and discover',
+    'titre2' => 'the oldest district of Lyon',
+    'titre3' => 'Organize your own visit',
+    'histoire' => "A little bit of history...",
     'histoire-text' => '????',
 
-    'datavision1' => 'Monument culturels',
+    'datavision1' => 'Cultural monuments',
     'datavision2' => 'Traboules',
-    'datavision3' => 'Des habitants se disent heureux dans ce quartier',
+    'datavision3' => 'Of the inhabitants are happy in the district',
 
 
 ];
