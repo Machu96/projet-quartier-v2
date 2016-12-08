@@ -19,7 +19,8 @@
         <div id="parcours1" class="tabcontent flex-container">
             <div class="container-text journey-text">
                 <p>
-                    {{ trans('parcours.desc_P1') }}
+                    Cette visite en boucle dure environ 1h. Elle vous permet d'avoir un petit aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon.
+                    Loin d'être exhaustive, elle permet de découvrir les lieux.
                 </p>
                 <h2>{{ trans('parcours.titre_P1') }}</h2>
                 <ul>
@@ -74,7 +75,8 @@
             </div>
             <div class="container-map">
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1aEs4XvqmVPwEi318FYrwOgYFia0" width="100%" height="100%"></iframe></div>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1hGWZCDPwCqct0bz3TaJnHMEvHfI" width="100%" height="100%"></iframe>
+                    </div>
                 <div class="copy-link-map">
                     <form id="link-map">
                         <input disabled="disabled"  title="LienMap" type="text" name="mapurl"  value="https://goo.gl/maps/bNbUYZYJKTD2">
@@ -86,14 +88,27 @@
         <div id="parcours3" class="tabcontent flex-container">
             <div class="container-text journey-text">
                 <p>
-                    {{ trans('parcours.desc_P1') }}
+                    Cette visite en boucle dure environ 3h.
+                    Elle vous permet de voir tous les éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon.
                 </p>
                 <h2>{{ trans('parcours.titre_P3') }}</h2>
                 <ul>
-                    <li>1. Cathédrale Saint Jean</li>
-                    <li>2. Palais de Justice</li>
-                    <li>3. Vis’Art Galerie</li>
-                    <li>4. Place St Jean</li>
+                    <li>1. Place Saint-Jean</li>
+                    <li>2. Coup d'oeil</li>
+                    <li>3. Palais de Justice Historique</li>
+                    <li>4. Point 3 </li>
+                    <li>4. Place de la Baleine </li>
+                    <li>5. Auberge </li>
+                    <li>5. L'ancienne maison </li>
+                    <li>6. Temple du change </li>
+                    <li>7. Maison </li>
+                    <li>8. Escalier </li>
+                    <li>9. Art </li>
+                    <li>10. Ruelle </li>
+                    <li>11. Maison </li>
+                    <li>12. Ancienne Rue </li>
+                    <li>13. Façade </li>
+                    <li>14. Traboule </li>
                 </ul>
 
 
