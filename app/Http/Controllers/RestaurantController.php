@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RestaurantController extends Controller
 {
@@ -14,7 +15,15 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+        $restaurants = DB::table('restaurants')
+            ->select(
+                'name' . session('locale') . ' as name',
+                'description' . session('locale') . ' as description',
+                'url',
+                'address'
+            )->get();
 
+        return view('restaurants.index', compact('restaurants'));
     }
 
     public function indexAdmin()
