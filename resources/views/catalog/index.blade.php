@@ -8,9 +8,9 @@
 
 @extends('default')
 
-<div class="header header-page"></div>
-@section('content')
 
+@section('content')
+    <div class="header header-page"></div>
     {{-- Mettre le contenu ici --}}
     <div class="header-mt">
         <div class="flex-container-column">
