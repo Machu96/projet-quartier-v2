@@ -25,13 +25,13 @@
         <nav>
             <ul class="menu">
                 <li><a href="{{ route('home') }}">{{ trans('menu.home') }}</a></li>
-                <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
-                <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
-                <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
-                <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
+                <li><a href="{{ action('PlaceController@index') }}">{{ trans('menu.lieux') }}</a></li>
+                <li><a href="{{ action('CatalogController@index') }}">{{ trans('menu.produit') }}</a></li>
+                <li><a href="{{ action('JourneyController@index') }}">{{ trans('menu.parcours') }}</a></li>
+                <li><a href="{{ action('CartController@index') }}">{{ trans('menu.panier') }}</a></li>
 
 
-                <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
+                <li><a href="{{ action('DashboardController@analytics') }}">{{ trans('menu.connexion') }}</a></li>
                 <li class="flex-container" id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">

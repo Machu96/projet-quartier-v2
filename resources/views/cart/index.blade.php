@@ -5,7 +5,7 @@
 
     <div class="header-mt">
         <div class="flex-container-column">
-            <h1 class="page-title" id="home_title_1">Votre panier</h1>
+            <h1 class="page-title" id="home_title_1">{{ trans('panier.titre1') }}</h1>
         </div>
     </div>
    <div style="background-color: white;" class="header-mt">
@@ -38,7 +38,7 @@
 
         @empty
 
-            Vous n'avez rien ajouté a votre panier
+           {{ trans('panier.annonce1') }}
 
         @endforelse
 
