@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -9,7 +10,7 @@ class PdfController extends Controller
 {
     public function generate(Request $request,PDF $pdf){
 
-        dd();
+        dd($request);
         $items = DB::table('products')
             ->select(
                 'products.name' . session('locale') . ' as productName',
