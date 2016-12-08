@@ -21,8 +21,8 @@ class CatalogController extends Controller
                 'products.stock as productStock',
                 'products.description'.session('locale').' as productDescription'
             )
-            ->where('products.name', 'like', '%' . $query . '%')
-            ->orWhere('products.description', 'like', '%' . $query . '%')
+            ->where('products.name'.session('locale'), 'like', '%' . $query . '%')
+            ->orWhere('products.description'.session('locale'), 'like', '%' . $query . '%')
             ->get();
 
         return $data;
@@ -36,7 +36,8 @@ class CatalogController extends Controller
                 'shops.name as shopName',
                 'products.name'.session('locale').' as productName',
                 'products.stock as productStock',
-                'products.description'.session('locale').' as productDescription'
+                'products.description'.session('locale').' as productDescription',
+                'products.price as productPrice'
             )
             ->get();
     }

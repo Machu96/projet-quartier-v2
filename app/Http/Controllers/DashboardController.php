@@ -14,7 +14,16 @@ class DashboardController extends Controller
     }
 
     public function event(){
-        return view('dashboard.event');
+        $events = DB::table('events')
+            ->select(
+                'events.name'. session('locale') .' as productName',
+                'events.description'. session('locale') .' as productDescription',
+                'events.url as image',
+                'events.date as date',
+                'events.hour as hour'
+            )
+            ->get();
+        return view('dashboard.event', compact('events'));
     }
 
     public function shop(){
