@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Vieux Lyon</title>
 
         {!! Html::style('css/knacss.css') !!}
         {!! Html::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') !!}
@@ -24,16 +24,15 @@
         </div>--}}
         <nav>
             <ul class="menu">
-                <li><a href="{{ route('home') }}">Accueil</a></li>
+                <li><a href="{{ route('home') }}">{{ trans('menu.home') }}</a></li>
                 <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
 
-                <li><button id="pdf">PDF</button></li>
 
                 <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
-                <li id="flags-form">
+                <li class="flex-container" id="flags-form">
                     <form action="{!! url('language/fr') !!}" method="GET">
                         <input type="hidden" value="{{ csrf_token() }}" name="_token">
                         <button type="submit" name="lang" value="fr">
