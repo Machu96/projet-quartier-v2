@@ -51,9 +51,6 @@
 
             var $table = $('table').clone();
 
-            console.log($table)
-
-
             //Ajouter au panier
             $('#product-grid ').on('click', '.add-cart-button',function(e){
 
@@ -62,20 +59,15 @@
                 $.post(
                     '{!! url('cart') !!}',
                     {
+                        "_token": $(e.target).parent()[0][0].value,
                         "id": e.target.value,
-                        "_token": $(e.target).parent()[0][0].value
+                        "quantity": $(e.target).parent()[0][1].value === "" || $(e.target).parent()[0][1].value == 0 ? 1 : $(e.target).parent()[0][1].value
                     }
-                );
-
-                $.get(
-                    '{!! url('cart') !!}'
-                ).then(function(response){
-                    console.log(response);
+                ).then(function(rep){
+                    console.log(rep);
                 });
 
             });
-
-
 
 
             //Filtrer les données
@@ -116,6 +108,8 @@
                         '<div class=" mts mbs txtcenter">' +
                         '<div class="add-cart-parent">' +
                         '{!! Form::open(['url' => url('cart'), 'method' => 'POST']) !!}' +
+                        '<label>{{ trans('catalog-psm.quantity') }}</label>' +
+                        '<input type="number" name="quantity" value="1">' +
                         '<button class="add-cart-button" value="'+item.productId+'">Ajouter au panier</button>' +
                         '{!! Form::close() !!}' +
                         '</div>' +
