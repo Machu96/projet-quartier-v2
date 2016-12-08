@@ -43,7 +43,7 @@
 
         <div class="form-group">
             <label for="longitude">Longitude</label>
-            <input class="form-control" name="longitude" id="longitude" type="number">
+            <input class="form-control" name="longitude" id="longitude" type="number" step ="any">
         </div>
 
         <button class="btn-primary btn" type="submit">Ajouter</button>
