@@ -17,5 +17,5 @@ return[
     'P3' => 'Parcours 3H',
     'PP' => 'Votre parcours',
     'desc_P1' => 'Cette visite en boucle dure environ 2h. Elle vous permet d\'avoir un bel aperçu des éléments remarquables caractérisant la partie Saint-Jean du Vieux-Lyon. Loin d\'être exhaustive, elle permet de se familiariser avec les lieux.',
-
+    
 ];
