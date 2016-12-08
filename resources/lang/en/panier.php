@@ -7,7 +7,7 @@
  */
 
 return[
-    'titre1' => 'our cart',
+    'titre1' => 'Our cart',
     'annonce1' => "You add nothing to your cart",
 
 
