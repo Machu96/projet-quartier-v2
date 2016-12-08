@@ -28,15 +28,14 @@
 --------------------------------------------------*/
 html body{
     height: 100%;
+    min-height: 100%;
     width: 100%;
     margin:0;
     padding:0;
-}
-body {
+    background-color: #222;
     font-family:"Playfair Display" ;
-    background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
-    background-size: 100%;
 }
+
 
 a{
     text-decoration: none;
@@ -63,12 +62,14 @@ iframe{
 
 .menu {
     display: flex;
-    background: rgba(255, 255, 255, 0.5);
-    height: 50px;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
+    position: absolute;
+    top:0;
+    height: 2em;
+    width:100%;
 }
 
 .menu li{
@@ -79,13 +80,21 @@ iframe{
 
 .menu a, .menu a:hover{
     text-decoration: none;
-    color: black;
-
+    color: black !important ;
 }
 
 
 .sub-menu li {
     display: inline-block;
+}
+.header-home{
+    height: 100vh;
+}
+.header-page{
+    height:505px;
+}
+.barre-menu{
+    display: none;
 }
 /*--------------------------------------------------
 	CONTAINER
@@ -106,6 +115,7 @@ iframe{
     background-color: white;
     box-shadow: 0px 0px 20px #000000;
     margin: 0.3em;
+    text-align: center;
 }
 #home_title_1{
     padding: 0px 65px 5px 65px;
@@ -116,7 +126,31 @@ iframe{
     transform: rotate(1deg);
 }
 
+.header{
+    display: inherit;
+    background: url(../img/background-vieux-lyon.jpg) no-repeat top center;
+    background-size: cover;
 
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+.content-menu{
+    background-color: #fff;
+    padding: 0 0 0 0 !important;
+}
+
+ul.content-menu{
+    margin-top: 2.5em;
+    line-height: 3.3em;
+    box-shadow: 0 0 4px #000;
+}
+li.content-menu{
+    margin-top: 1em !important;
+
+}
 
 /*--------------------------------------------------
 	Drapeaux
@@ -141,15 +175,17 @@ iframe{
 #flags-form button, #flags-form button:focus, #flags-form button:active{
     background: none;
     border: none;
-    padding: 0;
     outline: none;
     padding-right:10px;
+    position: relative;
+    top: 0.7em;
+    line-height: 0em !important;
 }
 /*--------------------------------------------------
 	HOME PAGE
 --------------------------------------------------*/
 #home_page{
-    height: 90vh;
+    height: 95vh;
     text-align: center;
 }
 #button_parcours{
@@ -161,6 +197,7 @@ iframe{
     box-shadow: 1px 1px 7px #000;
     font-size: 1em;
     line-height: 2.2em;
+    z-index: 1;
 }
 
 #map_icon{
@@ -555,6 +592,9 @@ Media Queries
 
 }
 @media only screen and (max-width:770px){
+    .barre-menu{
+        display: inline;
+    }
     .container-text{
         width: auto;
     }
@@ -659,3 +699,213 @@ Normalize
 --------------------------------------------------*/
 
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:1.7em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+/*--------------------------------------------------
+Burger_menu
+--------------------------------------------------*/
+.nav-button {
+    display: none; /* no button by default */
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    z-index: 17; /* will be above everything */
+    height: 2.4rem;
+    width: 2.8rem;
+    font-size: 0.8em;
+    color: #333;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.nav-button::before {
+    top: 0;
+}
+.nav-button::after {
+    top: calc(100% - 4px);
+}
+.navigation {
+    background: #333;
+}
+.navigation ul {
+    /*background-color: rgba(0,0,0,0.7);*/
+    z-index: 11;
+    padding-top: 3vh;
+    display: flex;
+    width: 80%;
+    left: 10%;
+}
+
+.navigation li {
+    /*margin-top: 1.8em;*/
+    text-align: center;
+}
+.navigation  a {
+    flex: 1;
+    display: block;
+    text-decoration: none;
+}
+.navigation > a:hover,
+.navigation > a:focus,
+.navigation > a:active {
+    background: #555;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 1010px) {
+    .mobile{
+        display: inherit;
+    }
+
+    @keyframes black-layout-fade-in {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 0.7;
+        }
+    }
+    .mobile.black-layout{
+        display: none;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        position: fixed;
+        opacity: 0;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        overflow:hidden;
+        /*animation: black-layout-fade-in 0.5s forwards reverse;*/
+    }
+    .mobile.black-layout.active{
+        display: inherit;
+        animation: black-layout-fade-in 0.5s forwards;
+    }
+    .js-enabled .nav-button {
+        display: inline-block;
+    }
+    /* styling opened nav */
+    .js-enabled .main {
+        position: absolute;
+        /*transition: transform .25s;
+        will-change: transform;*/
+        top:0;
+        z-index: 13;
+    }
+    .js-enabled .main.is-opened {
+        /*transform: translateY(60vw);*/
+
+    }
+    .menu li{
+        font-family: "Playfair Display", TWCentMT, sans-serif;
+        text-transform: inherit;
+    }
+
+    .barre-menu{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 12; /* will be under everything */
+
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        height: 40px;
+        box-shadow: 0 0 7px #444;
+        display: block;
+    }
+    .menu{
+        background: none;
+        height: 50px;
+    }
+    .content-menu li{
+        color: #fff;
+        font-family: "Playfair Display";
+        text-transform: none;
+        border-bottom: solid 1px rgba(80,80,80,0.7);
+        /*background-color: rgba(0,0,0,0.7);*/
+        padding: 8px 15px 8px 15px !important;
+        text-align: inherit;
+        margin-top: 0;
+    }
+    .navigation ul {
+        background-color: rgba(0,0,0,0.7);
+        z-index: 11;
+        padding-top: 7vh !important;
+        display: inline;
+        left: 0;
+        width: 100%;
+        line-height: 1.6em;
+    }
+
+    .content-menu a{
+        color: #fff;
+        font-family: "Playfair Display";
+    }
+    .content-menu{
+        position: relative;
+        top: -310px;
+        padding: 0px;
+        width: 100%;
+        transition: transform .5s;
+        will-change: transform;
+    }
+    @keyframes opening-nav {
+        to{
+            top: 40px;
+        }
+    }
+    #map_icon{
+        display: none;
+    }
+    .content-menu.is-opened{
+        transform: translateY(500px);
+        /*animation: opening-nav 0.7s linear forwards;*/
+    }
+
+    .mobile.title{
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 0.3em;
+        position: relative;
+        z-index: 13;
+    }
+    #datavision_container{
+        padding: 0px 0px 0px 0px;
+    }
+
+    #flags-form button, #flags-form button:focus, #flags-form button:active{
+        top: 0.2em;
+    }
+
+    .page-title{
+        padding: 0 0 5px 0 !important;
+        width: 100% !important;
+        font-size: 1.4em !important;
+        margin-top: 5vh !important;
+    }
+    .header{
+        z-index: -1;
+        top: 40px;
+        display: inherit;
+        width: 100%;
+        position: absolute;
+        font-family:"Playfair Display";
+        background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
+        background-size: cover;
+    }
+    .header-homepage{
+        height: 100vh;
+
+    }
+    .header-page{
+        height: 20vh;
+    }
+
+	#footer-picture{
+		display: none;
+	}
+}

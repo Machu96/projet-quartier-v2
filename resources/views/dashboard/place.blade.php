@@ -32,23 +32,18 @@
     </div>
 
     <div class="form-group">
-        <label for="creation_date">Date de création</label>
-        <input type="date" name="creation_date" id="creation_date" class="form-control">
-    </div>
-
-    <div class="form-group">
             <label for="image">Image</label>
             <input class="form-control" name="image" id="image" type="file">
         </div>
 
         <div class="form-group">
             <label for="latitude">Latitude</label>
-            <input class="form-control" name="latitude" id="latitude" type="number">
+            <input class="form-control" name="latitude" id="latitude" type="number" step="any">
         </div>
 
         <div class="form-group">
             <label for="longitude">Longitude</label>
-            <input class="form-control" name="longitude" id="longitude" type="number">
+            <input class="form-control" name="longitude" id="longitude" type="number" step ="any">
         </div>
 
         <button class="btn-primary btn" type="submit">Ajouter</button>
