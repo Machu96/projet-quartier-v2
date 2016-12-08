@@ -72,6 +72,7 @@ desired effect
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <a href="{!! url('admin/analytics') !!}">Admin</a>
+
             <!-- Navbar Right Menu -->
         </nav>
     </header>
@@ -101,6 +102,17 @@ desired effect
                 <li><a href="{!! url('admin/shop') !!}"><i class="fa fa-shopping-cart"></i> <span>Gestion des produits</span></a></li>
                 <li><a href="{!! url('admin/place') !!}"><i class="fa fa-map"></i> <span>Gestion des lieux</span></a></li>
                 <li><a href="{!! url('admin/restaurant') !!}"><i class="fa fa-coffee"></i> <span>Gestion des  bars</span></a></li>
+                <li><form action="{!! url('language/fr') !!}" method="GET">
+                        <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                        <button  class="btn btn-success" type="submit" name="lang" value="fr"> FR</button>
+                    </form></li>
+                <li>
+                    <form action="{!! url('language/en') !!}" method="GET">
+                        <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                        <button class="btn btn-success" type="submit" name="lang" value="en">EN
+                        </button>
+                    </form></li>
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>
