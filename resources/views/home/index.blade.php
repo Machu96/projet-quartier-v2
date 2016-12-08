@@ -1,7 +1,3 @@
-{{--
-
---}}
-
 @extends('default')
 
 @section('content')
@@ -65,6 +61,13 @@
             </div>
            @endforeach
         </div>
+        
+        @foreach($events as $e)
+
+            <img src="{{  Storage::get('public/events/' . $e->url)  }}" alt="">
+
+        @endforeach
+        
         <div id="datavision_container" class="flex-container">
             <div class="home-datavision">
                 <div class="home-datavision-number" id="compteur1">0</div>
@@ -80,7 +83,6 @@
             </div>
         </div>
     </div>
-
 
 @endsection
 

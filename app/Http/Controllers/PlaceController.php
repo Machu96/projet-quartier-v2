@@ -17,12 +17,20 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        $places = DB::table('places')->get();
+        $places = DB::table('places')->select(
+            'name' . session('locale') . ' as name',
+            'description' . session('locale') . ' as description',
+            'url'
+        )->get();
         return view('place.index', compact('places'));
     }
 
     public function indexAdmin(){
-        $places = DB::table('places')->get();
+        $places = DB::table('places')->select(
+            'name' . session('locale') . ' as name',
+            'description' . session('locale') . ' as description',
+            'url'
+        )->get();
         return view('dashboard.place', compact('places'));
     }
 
@@ -47,8 +55,10 @@ class PlaceController extends Controller
         $urlImage = str_random(32) . '.' . $request->image->clientExtension();
         $request->image->storeAs('public/places', $urlImage);
 
-        $place->name = $request->name;
-        $place->description = $request->description;
+        $place->nameFr = $request->nameFr;
+        $place->nameEn = $request->nameEn;
+        $place->descriptionFr = $request->descriptionFr;
+        $place->descriptionEn = $request->descriptionEn;
         $place->url = $urlImage;
         $place->latitude = $request->latitude;
         $place->longitude = $request->longitude;

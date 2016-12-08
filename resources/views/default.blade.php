@@ -24,13 +24,12 @@
         </div>--}}
         <nav>
             <ul class="menu">
-                <li><a href="{{ route('home') }}">Accueil</a></li>
+                <li><a href="{{ route('home') }}">{{ trans('menu.home') }}</a></li>
                 <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
                 <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
                 <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
                 <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
 
-                <li><button id="pdf">PDF</button></li>
 
                 <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
                 <li class="flex-container" id="flags-form">
