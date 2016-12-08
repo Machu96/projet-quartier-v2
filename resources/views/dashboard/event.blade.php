@@ -49,5 +49,17 @@
 
 
     {!! Form::close() !!}
+    <div class="flex-container">
+        @foreach($events as $event)
+
+            <div class="item_gallery">
+                <h1>{{ $event->name }}</h1>
+                <img src="/storage/app/public/events/{{$event->url }}">
+                <p>{{ $event->description }}</p>
+                <button type="button" class="btn btn-warning">Supprimer</button>
+            </div>
+
+        @endforeach
+    </div>
 
 @endsection

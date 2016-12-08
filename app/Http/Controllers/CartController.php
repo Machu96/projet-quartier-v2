@@ -10,6 +10,11 @@ class CartController extends Controller
     public function index(){
         $cart = session('item') !== null ? session('item') : [];
 
+        $ids = [];
+        foreach (session('item') as $s){
+            array_push($ids, $s['id']);
+        }
+
         $data = DB::table('shops')
             ->join('products', 'shops.id', '=', 'products.shop_id')
             ->select(
@@ -20,7 +25,7 @@ class CartController extends Controller
                 'products.description'.session('locale').' as productDescription',
                 'products.price as productPrice'
             )
-            ->whereIn('products.id', $cart)
+            ->whereIn('products.id', $ids)
             ->get();
 
         foreach ($data as $d){
@@ -49,7 +54,9 @@ class CartController extends Controller
             array_push($session, $item);
         }
 
+
         session(['item' => $session]);
+        session('mach', session('item'));
         return session('item');
     }
 
