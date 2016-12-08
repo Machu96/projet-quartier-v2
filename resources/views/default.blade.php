@@ -24,6 +24,7 @@
         <ul class="content-menu">
             <a href="{{ route('home') }}"><li>{{ trans('menu.home') }}</li></a>
             <a href="{{ action('PlaceController@index') }}"><li>{{ trans('menu.lieux') }}</li></a>
+            <a href="{{ action('RestaurantController@index') }}"><li>{{ trans('menu.restaurant') }}</li></a>
             <a href="{{ action('CatalogController@index') }}"><li>{{ trans('menu.produit') }}</li></a>
             <a href="{{ action('JourneyController@index') }}"><li>{{ trans('menu.parcours') }}</li></a>
             <a href="{{ action('CartController@index') }}"><li>{{ trans('menu.panier') }}</li></a>

@@ -15,6 +15,6 @@ return [
     'parcours' => 'TRIP',
     'panier' => ' MY CART',
     'connexion' => 'CONNEXION',
-
+    'restaurant' => 'RESTAURANT',
 
 ];
