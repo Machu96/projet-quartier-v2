@@ -18,7 +18,8 @@ Route::get('/', function () {
             'name' . session('locale') . ' as name',
             'description' . session('locale') . ' as description',
             'date',
-            'url'
+            'url',
+            'place'
         )->get()
     ]);
 })->name('home');
