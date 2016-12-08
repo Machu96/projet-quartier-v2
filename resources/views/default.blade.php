@@ -22,14 +22,14 @@
     </div>
     <div class="menu">
         <ul class="content-menu">
-            <li><a href="{{ route('home') }}">Accueil</a></li>
-            <li><a href="{{ action('PlaceController@index') }}">Lieux culturels</a></li>
-            <li><a href="{{ action('CatalogController@index') }}">Produits</a></li>
-            <li><a href="{{ action('JourneyController@index') }}">Parcours</a></li>
-            <li><a href="{{ action('CartController@index') }}">Mon panier</a></li>
+            <a href="{{ route('home') }}"><li>Accueil</li></a>
+            <a href="{{ action('PlaceController@index') }}"><li>Lieux culturels</li></a>
+            <a href="{{ action('CatalogController@index') }}"><li>Produits</li></a>
+            <a href="{{ action('JourneyController@index') }}"><li>Parcours</li></a>
+            <a href="{{ action('CartController@index') }}"><li>Mon panier</li></a>
 
 
-            <li><a href="{{ action('DashboardController@analytics') }}">Admin</a></li>
+            <a href="{{ action('DashboardController@analytics') }}"><li>Admin</li></a>
             <li class="flex-container" id="flags-form">
                 <form action="{!! url('language/fr') !!}" method="GET">
                     <input type="hidden" value="{{ csrf_token() }}" name="_token">
