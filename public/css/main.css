@@ -129,7 +129,7 @@ iframe{
 
 .header{
     display: inherit;
-    background: url(../img/background-vieux-lyon.jpg) no-repeat top center;
+    background: url(../img/background-vieux-lyon-3.jpg) no-repeat top center;
     background-size: cover;
 
     position: absolute;
@@ -139,18 +139,21 @@ iframe{
 
 
 .content-menu{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 0 0 0 0 !important;
 }
 
 ul.content-menu{
-    margin-top: 2.5em;
+    margin-top: 1.3em;
     line-height: 3.3em;
     box-shadow: 0 0 4px #000;
 }
-li.content-menu{
+a.content-menu{
+    border-left: dashed 1px #999;
     margin-top: 1em !important;
-
+}
+.content-menu a:hover{
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*--------------------------------------------------
@@ -250,11 +253,11 @@ li.content-menu{
                                 EVENT SECTION
  ******************************************************************************/
 #event_container{
-    background-image: url("../img/fond-event.png");
-    background-attachment:fixed;
+    background: url("../img/fond-event-2.jpg") fixed center center;
     background-size: cover;
     width: 100%;
-    padding: 60px 0px 60px 0px;
+    height: auto;
+    padding: 70px 0px 120px 0px;
 }
 .event{
     margin: 20px;
@@ -330,13 +333,14 @@ li.content-menu{
  ******************************************************************************/
 
 #datavision_container{
-    background: url('../img/fond-datavision.png') no-repeat;
+    background: url('../img/fond-datavision-2.png') no-repeat;
     background-size:cover;
     width: 100%;
-    height:560px;
-    margin-top:-120px;
-    margin-bottom:-110px;
+    height:480px;
+    margin-top:-150px;
+    margin-bottom:-165px;
     padding: 10px 70px 10px 70px;
+    z-index: 14;
 }
 
 .home-datavision{
@@ -546,24 +550,26 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 --------------------------------------------------*/
 
 footer{
-    margin-top: 30px;
     padding-top:7px;
-    height:40px;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
     width: 100%;
-    position: absolute;
+    position: relative;
     text-align: center;
+    bottom: -352px;
+    /*margin-top: 15em;*/
 }
 footer span {
     font-family: Tw Cen MT Regular;
 
 }
 #footer-picture{
-    height:100px;
-    background: url("../img/background-vieux-lyon.jpg") no-repeat bottom center;
+    height: 424px;
+    background: url("../img/footer.jpg") no-repeat center center;
     background-size: cover;
     width:100%;
-
+    /*margin-top: 15em;*/
+    position: relative;
 }
 /*--------------------------------------------------
 KEY FRAME
@@ -731,7 +737,7 @@ Burger_menu
     z-index: 11;
     padding-top: 3vh;
     display: flex;
-    width: 80%;
+    width: 100%;
     left: 10%;
 }
 
@@ -895,7 +901,7 @@ Burger_menu
         width: 100%;
         position: absolute;
         font-family:"Playfair Display";
-        background: url("../img/background-vieux-lyon.jpg") no-repeat top center;
+        background: url("../img/background-vieux-lyon-3.jpg") no-repeat top center;
         background-size: cover;
     }
     .header-homepage{
@@ -906,7 +912,4 @@ Burger_menu
         height: 20vh;
     }
 
-	#footer-picture{
-		display: none;
-	}
 }
