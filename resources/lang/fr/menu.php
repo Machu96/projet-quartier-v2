@@ -14,5 +14,6 @@ return [
     'parcours' => 'PARCOURS',
     'panier' => 'MON PANIER',
     'connexion' => 'CONNEXION',
+    'restaurant' => 'RESTAURANT'
 
 ];
